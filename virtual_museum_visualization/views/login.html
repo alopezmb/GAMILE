@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container h-100 login-box">
+    <div class="row h-100 justify-content-center">
+         <form action="/login" method="post" class="my-auto border rounded bg-white p-4 w-100">
+           <div class="form-group text-center">
+               <h3 class="text-bold">Login</h3>
+           </div>
+           <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter email">
+           </div>
+           <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+           </div>
+           {% if error_message is defined %}
+           <p class="text-center text-danger">{{error_message}}</p>
+           {% endif %}
+           <div class="row justify-content-center mt-4">
+              <button type="submit" class="btn w-50 btn-primary">Sign In</button>
+           </div>
+           <p class="registration-prompt">Not a user? Register <a href="/register">here</a></p>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

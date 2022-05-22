@@ -1,0 +1,3 @@
+room_number,x_start,x_end,y_start,y_end,door_1_x,door_1_y,door_1_room_connection,door_2_x,door_2_y,door_2_room_connection
+1,0.00,20.00,80.00,100.00,10.00,80.00,6,20.00,90.00,6
+2,20.00,40.00,80.00,100.00,37.00,80.00,7,40.00,90.00,7

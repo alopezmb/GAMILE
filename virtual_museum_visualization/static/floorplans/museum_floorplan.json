@@ -1,0 +1,2322 @@
+{"floorplan": {
+	"corners": {
+		"C1-11": {"x": 0, "y": 0},
+		"C2-11": {"x": 400, "y": 0},
+		"C3-11": {"x": 400, "y": 600},
+		"C4-11": {"x": 600, "y": 600},
+		"C5-11": {"x": 600, "y": 1000},
+		"C6-11": {"x": 0, "y": 1000},
+		"C1-10": {"x": 400, "y": 0},
+		"C2-10": {"x": 1200, "y": 0},
+		"C3-10": {"x": 1200, "y": 600},
+		"C4-10": {"x": 400, "y": 600},
+		"C1-12": {"x": 600, "y": 600},
+		"C2-12": {"x": 1200, "y": 600},
+		"C3-12": {"x": 1200, "y": 1000},
+		"C4-12": {"x": 600, "y": 1000},
+		"C1-2": {"x": 0, "y": 1000},
+		"C2-2": {"x": 900, "y": 1000},
+		"C3-2": {"x": 900, "y": 1400},
+		"C4-2": {"x": 400, "y": 1400},
+		"C5-2": {"x": 400, "y": 2000},
+		"C6-2": {"x": 0, "y": 2000},
+		"C1-3": {"x": 400, "y": 1400},
+		"C2-3": {"x": 900, "y": 1400},
+		"C3-3": {"x": 900, "y": 2000},
+		"C4-3": {"x": 400, "y": 2000},
+		"C1-4": {"x": 0, "y": 2000},
+		"C2-4": {"x": 900, "y": 2000},
+		"C3-4": {"x": 900, "y": 2400},
+		"C4-4": {"x": 0, "y": 2400},
+		"C1-5": {"x": 900, "y": 1400},
+		"C2-5": {"x": 1200, "y": 1400},
+		"C3-5": {"x": 1200, "y": 2400},
+		"C4-5": {"x": 900, "y": 2400},
+		"C1-1": {"x": 1200, "y": 0},
+		"C2-1": {"x": 1700, "y": 0},
+		"C3-1": {"x": 1700, "y": 1000},
+		"C4-1": {"x": 2000, "y": 1000},
+		"C5-1": {"x": 2000, "y": 1400},
+		"C6-1": {"x": 1700, "y": 1400},
+		"C7-1": {"x": 1700, "y": 2400},
+		"C8-1": {"x": 1200, "y": 2400},
+		"C9-1": {"x": 1200, "y": 1400},
+		"C10-1": {"x": 900, "y": 1400},
+		"C11-1": {"x": 900, "y": 1000},
+		"C12-1": {"x": 1200, "y": 1000},
+		"C1-8": {"x": 1700, "y": 1400},
+		"C2-8": {"x": 2000, "y": 1400},
+		"C3-8": {"x": 2000, "y": 2400},
+		"C4-8": {"x": 1700, "y": 2400},
+		"C1-7": {"x": 2000, "y": 1400},
+		"C2-7": {"x": 2900, "y": 1400},
+		"C3-7": {"x": 2900, "y": 1800},
+		"C4-7": {"x": 2400, "y": 1800},
+		"C5-7": {"x": 2400, "y": 2400},
+		"C6-7": {"x": 2000, "y": 2400},
+		"C1-9": {"x": 2400, "y": 1800},
+		"C2-9": {"x": 2900, "y": 1800},
+		"C3-9": {"x": 2900, "y": 2400},
+		"C4-9": {"x": 2400, "y": 2400},
+		"C1-6": {"x": 2000, "y": 1000},
+		"C2-6": {"x": 2600, "y": 1000},
+		"C3-6": {"x": 2600, "y": 1400},
+		"C4-6": {"x": 2000, "y": 1400},
+		"C1-14": {"x": 2300, "y": 0},
+		"C2-14": {"x": 2900, "y": 0},
+		"C3-14": {"x": 2900, "y": 1400},
+		"C4-14": {"x": 2600, "y": 1400},
+		"C5-14": {"x": 2600, "y": 500},
+		"C6-14": {"x": 2300, "y": 500},
+		"C1-15": {"x": 2300, "y": 500},
+		"C2-15": {"x": 2600, "y": 500},
+		"C3-15": {"x": 2600, "y": 1000},
+		"C4-15": {"x": 2300, "y": 1000},
+		"C1-13": {"x": 1700, "y": 0},
+		"C2-13": {"x": 2300, "y": 0},
+		"C3-13": {"x": 2300, "y": 1000},
+		"C4-13": {"x": 1700, "y": 1000}
+
+	},
+	"walls": [
+	{
+		"corner1": "C1-11",
+		"corner2": "C2-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-11",
+		"corner2": "C3-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-11",
+		"corner2": "C4-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-11",
+		"corner2": "C5-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C5-11",
+		"corner2": "C6-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C6-11",
+		"corner2": "C1-11",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-10",
+		"corner2": "C2-10",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-10",
+		"corner2": "C3-10",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-10",
+		"corner2": "C4-10",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-10",
+		"corner2": "C1-10",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-12",
+		"corner2": "C2-12",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-12",
+		"corner2": "C3-12",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-12",
+		"corner2": "C4-12",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-12",
+		"corner2": "C1-12",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-2",
+		"corner2": "C2-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-2",
+		"corner2": "C3-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-2",
+		"corner2": "C4-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-2",
+		"corner2": "C5-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C5-2",
+		"corner2": "C6-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C6-2",
+		"corner2": "C1-2",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-3",
+		"corner2": "C2-3",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-3",
+		"corner2": "C3-3",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-3",
+		"corner2": "C4-3",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-3",
+		"corner2": "C1-3",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-4",
+		"corner2": "C2-4",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-4",
+		"corner2": "C3-4",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-4",
+		"corner2": "C4-4",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-4",
+		"corner2": "C1-4",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-5",
+		"corner2": "C2-5",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-5",
+		"corner2": "C3-5",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-5",
+		"corner2": "C4-5",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-5",
+		"corner2": "C1-5",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-1",
+		"corner2": "C2-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-1",
+		"corner2": "C3-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-1",
+		"corner2": "C4-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-1",
+		"corner2": "C5-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C5-1",
+		"corner2": "C6-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C6-1",
+		"corner2": "C7-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C7-1",
+		"corner2": "C8-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C8-1",
+		"corner2": "C9-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C9-1",
+		"corner2": "C10-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C10-1",
+		"corner2": "C11-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C11-1",
+		"corner2": "C12-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C12-1",
+		"corner2": "C1-1",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-8",
+		"corner2": "C2-8",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-8",
+		"corner2": "C3-8",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-8",
+		"corner2": "C4-8",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-8",
+		"corner2": "C1-8",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-7",
+		"corner2": "C2-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-7",
+		"corner2": "C3-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-7",
+		"corner2": "C4-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-7",
+		"corner2": "C5-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C5-7",
+		"corner2": "C6-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C6-7",
+		"corner2": "C1-7",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-9",
+		"corner2": "C2-9",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-9",
+		"corner2": "C3-9",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-9",
+		"corner2": "C4-9",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-9",
+		"corner2": "C1-9",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-6",
+		"corner2": "C2-6",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-6",
+		"corner2": "C3-6",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-6",
+		"corner2": "C4-6",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-6",
+		"corner2": "C1-6",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-14",
+		"corner2": "C2-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-14",
+		"corner2": "C3-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-14",
+		"corner2": "C4-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-14",
+		"corner2": "C5-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C5-14",
+		"corner2": "C6-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C6-14",
+		"corner2": "C1-14",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+
+	{
+		"corner1": "C1-15",
+		"corner2": "C2-15",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-15",
+		"corner2": "C3-15",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-15",
+		"corner2": "C4-15",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-15",
+		"corner2": "C1-15",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C1-13",
+		"corner2": "C2-13",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C2-13",
+		"corner2": "C3-13",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C3-13",
+		"corner2": "C4-13",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	},
+	{
+		"corner1": "C4-13",
+		"corner2": "C1-13",
+		"frontTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		},    
+		"backTexture": {
+			"url": "/static/rooms/textures/wallmap.png",
+			"stretch": true,
+			"scale": 0
+		}
+	}
+
+	]
+},
+"items": [
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-1",
+		"orientation": "horizontal",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1450,
+		"ypos":111.0099999,
+		"zpos":2400,
+		"rotation":0,
+		"scale_x":2.059732234809477,
+		"scale_y":1.0018954752384202,
+		"scale_z":1.0492546357381376,
+		"fixed":true,
+		"width":200,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-5",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1200.5,
+		"ypos":111.0099999,
+		"zpos":1900,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D5-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1199.5,
+		"ypos":111.0099999,
+		"zpos":1900,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-8",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1699.5,
+		"ypos":111.0099999,
+		"zpos":1900,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D8-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1700.5,
+		"ypos":111.0099999,
+		"zpos":1900,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-2",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":900.5,
+		"ypos":111.0099999,
+		"zpos":1200,
+		"rotation":1.57,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D2-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":899.5,
+		"ypos":111.0099999,
+		"zpos":1200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-6",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1999.5,
+		"ypos":111.0099999,
+		"zpos":1200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D6-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2000.5,
+		"ypos":111.0099999,
+		"zpos":1200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-13",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1699.5,
+		"ypos":111.0099999,
+		"zpos":500,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D13-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1700.5,
+		"ypos":111.0099999,
+		"zpos":500,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D1-10",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1200.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D10-1",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1199.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D5-3",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":900.5,
+		"ypos":111.0099999,
+		"zpos":1700,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D3-5",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":899.5,
+		"ypos":111.0099999,
+		"zpos":1700,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D5-4",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":900.5,
+		"ypos":111.0099999,
+		"zpos":2200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D4-5",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":899.5,
+		"ypos":111.0099999,
+		"zpos":2200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D3-2",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":650,
+		"ypos":111.0099999,
+		"zpos":1400.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D2-3",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":650,
+		"ypos":111.0099999,
+		"zpos":1399.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D3-4",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":650,
+		"ypos":111.0099999,
+		"zpos":1999.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D4-3",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":650,
+		"ypos":111.0099999,
+		"zpos":2000.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D4-2",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":200,
+		"ypos":111.0099999,
+		"zpos":2000.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D2-4",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":200,
+		"ypos":111.0099999,
+		"zpos":1999.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D2-11",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":300,
+		"ypos":111.0099999,
+		"zpos":1000.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D11-2",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":300,
+		"ypos":111.0099999,
+		"zpos":999.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D11-12",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":599.5,
+		"ypos":111.0099999,
+		"zpos":800,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D12-11",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":600.5,
+		"ypos":111.0099999,
+		"zpos":800,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D11-10",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":399.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D10-11",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":400.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D12-10",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":900,
+		"ypos":111.0099999,
+		"zpos":600.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D10-12",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":900,
+		"ypos":111.0099999,
+		"zpos":599.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D6-13",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2150,
+		"ypos":111.0099999,
+		"zpos":1000.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D13-6",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2150,
+		"ypos":111.0099999,
+		"zpos":999.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D13-6",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2150,
+		"ypos":111.0099999,
+		"zpos":1000.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D13-14",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2299.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D14-13",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2300.5,
+		"ypos":111.0099999,
+		"zpos":300,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D15-14",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2599.5,
+		"ypos":111.0099999,
+		"zpos":750,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D14-15",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2600.5,
+		"ypos":111.0099999,
+		"zpos":750,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D6-7",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2300,
+		"ypos":111.0099999,
+		"zpos":1399.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D7-6",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2300,
+		"ypos":111.0099999,
+		"zpos":1400.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D7-14",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2750,
+		"ypos":111.0099999,
+		"zpos":1400.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D14-7",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2750,
+		"ypos":111.0099999,
+		"zpos":1399.5,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D8-7",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":1999.5,
+		"ypos":111.0099999,
+		"zpos":2200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D7-8",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2000.5,
+		"ypos":111.0099999,
+		"zpos":2200,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D7-9",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2399.5,
+		"ypos":111.0099999,
+		"zpos":2100,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name": "Open Door",
+		"item_type": 7,
+		"name":"D9-7",
+		"model_url": "static/models/js/open_door.js",
+		"xpos":2400.5,
+		"ypos":111.0099999,
+		"zpos":2100,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":1,
+		"fixed":true,
+		"width":100,
+		"depth":8
+	},
+	{
+		"item_name":"The Annunciation",
+		"item_type":2,
+		"model_url":"static/models/js/anunciacion.js",
+		"author": "El Greco",
+		"description": "A passage from the New Testament (Luke I, 26-38) that tells of the annunciation of the Virgin´s motherhood by the Archangel Gabriel and the incarnation of Christ in Mary by the Holy Ghost in the form of a dove. The burning bush, which appeared to A passage from the New Testament (Luke I, 26-38) that tells of the annunciation of the Virgin´s motherhood by the Archangel Gabriel and the incarnation of Christ in Mary by the Holy Ghost in the form of a dove. The burning bush, which appeared to Moses on Mount Sinai and burned without being consumed by the fire, symbolizes the virginity and purity of Mary. On the left, on a book stand, is the book the Virgin was reading with Gabriel appeared, along with the sewing basket, an allusion to the veil of the Temple that Mary was sewing at that time, according to the Armenian Gospel of Childhood. The angelical musicians appear like happy witness to the scene.\n\nIn 1596 El Greco was commissioned to paint the high altar of the Colegio de la Encarnación (Madrid), an Augustinian seminary better known by the name of its founder, Doña María de Córdoba y Aragón (1539-1593).The central part of the bottom section of the altarpiece featured The Annunciation, which had the Adoration of the Shepherd (now in Bucharest) an the Baptism of Christ on either side of it, scenes of the Resurrection and of Pentecost. With the exception of Pentecost, each of these subjects had been painted previously by El Greco, some of them during his Italian period, However, here they are taken up again from a perspective that is particularly original; a perspective that is particularly original; a perspective that is steeped in a more “expressionist” spirituality, and which from 1600 became even more personal and disconcerting, intentionally distanced from contemporary painting.\n\nEl Greco painted the scenes in small spaces, emphasizing the vertical format, and bathing them in a ghostly light that enhances the unreality of the figures, which are arranged in a very marked foreshortening and have very expressive features. The colours-cold, intense and contrasting- are applied very loosely over powerful anatomical constructions, and are perfect examples of El Greco’ s highly personal style in the final stretch of his career.",
+		"room": "room_1",
+		"xpos":1203,
+		"ypos":130,
+		"zpos":1650,
+		"rotation":0,
+		"scale_x":1.54,
+		"scale_y":2.07,
+		"scale_z":6,
+		"fixed":true,
+		"width":110,
+		"depth":15
+	},
+	{
+		"item_name":"Las Meninas",
+		"item_type":2,
+		"model_url":"static/models/js/meninas.js",
+		"author": "Diego Velázquez",
+		"description": "This is one of Velázquez`s largest paintings and among those in which he made most effort to create a complex and credible composition that would convey a sense of life and reality while enclosing a dense network of meanings. The artist achieved his intentions and Las Meninas became the only work to which the writer on art Antonio Palomino devoted a separate section in his history of Spanish painters of 1724, entitling it In which the most illustrious work by Don Diego Velázquez is described. Since then the painting has never lost its status as a masterpiece. From Palomino we know that it was painted in 1656 in the Cuarto del Príncipe in the Alcázar in Madrid, which is the room seen in the work. He also identifies most of the figures of the court servants grouped around the Infanta Margarita, who is attended by two of the Queen`s meninas or maids-ofhonour: María Agustina Sarmiento and Isabel de Velasco. In addition to that group, we also see the artist himself working on a large canvas, the dwarves Mari Bárbola and Nicolasito Pertusato, the latter provoking a mastiff, and the lady-in-waiting Marcela de Ulloa next to a guardadamas (attendant), with the chamberlain José Nieto standing in the doorway in the background. Reflected in the mirror are the faces of Philip IV and Mariana of Austria, the Infanta`s parents who are watching the scene taking place. The figures inhabit a space that is modelled not just through the laws of scientific perspective but also through aerial perspective. In the definition of this space the multiplication of the light sources plays an important role.\n\nLas Meninas has one meaning that is immediately obvious to any viewer: it is a group portrait set in a specific location and peopled with identifiable figures undertaking comprehensible actions. The painting`s aesthetic values are also evident: the setting is one of the most credible spaces depicted in western art; the composition combines unity and variety; the remarkably beautiful details are divided across the entire pictorial surface; and finally, the painter has taken a decisive step forward on the path to illusionism, which was one of the goals of European painting in the early modern age, given that he has gone beyond transmitting resemblance in order to successfully achieve the representation of life or animation. However, as is habitual with Velázquez, in this scene in which the Infanta and the court servants pause in their actions on the arrival of the King and Queen, there are numerous underlying meanings that pertain to different fields of experience and which co-exist in one of the masterpieces of western art that has been the subject of the most numerous and most varied interpretations. One study, for example, has focused on the royal status of the Infanta, which thus endows the entire painting with a political content. There are also, however, important references of an art-historical nature that are expressed through the presence of the painter himself and the paintings hanging on the rear wall, while the inclusion of the mirror makes this work a consideration on the act of seeing and ensures that the viewer reflects on the laws of representation, the limits between painting and reality and his or her own role within the painting.\n\nThis richness and variety in the content, combined with the complexity of the painting`s composition and the variety of actions depicted, make Las Meninas a portrait in which the artist deploys representational strategies and pursues aims that go beyond the habitual ones in this genre, bringing it closer to history painting. In this sense, it is one of the key works through which Velázquez championed the potential of the pictorial genre to which he had devoted his activities since he arrived at court in 1623.",
+		"room": "room_1",
+		"xpos":1697,
+		"ypos":135,
+		"zpos":1590,
+		"rotation":0,
+		"scale_x":2.460624999999995,
+		"scale_y":2.0721025367071877,
+		"scale_z":6,
+		"fixed":true,
+		"width":175,
+		"depth":15
+	},
+	{
+		"item_name":"The Nobleman with his Hand on his Chest",
+		"item_type":2,
+		"model_url":"static/models/js/caballero_mano_pecho.js",
+		"author": "EL Greco",
+		"description":"This bust-length portrait entered the royal collections as a donation by the widow of the Duke of Arco, gentlemanin- waiting, Equerry and Master of the Horse to Philip V. In his recreational estate at El Pardo, De Arco possessed a group of six portraits of gentlemen by El Greco whose provenance is now unknown.This group would come to constitute the principal holdings of portraits by the artist now in the Museo del Prado.The present canvas is one of the earliest works by El Greco painted in Spain, and the most distinctive of the six.The sitter, who is aged around 30, is dressed according to Spanish fashion of the late 1570s, with a narrow, white ruff that reaches up behind his ears and frames his head. Standing out against his tight-fitting, black silk doublet are his right hand, resting on his breast, and the gilded hilt of his sword.The way that the left arm is bent suggests the he is holding and presenting the sheathed weapon with his left hand, which is invisible to the viewer.The figure is outlined against a plain background of a pearly grey tone modulated by the reddish-brown of the preparatory layer beneath, which is visible on the surface. Thanks to the fact that it was displayed at an early date in the Museo del Prado, the painting became one of El Greco’s most celebrated works. The inclusion of the costly sword, the solemn and rhetorical gesture of the right hand, which is not common in secular works by the artist although fairly frequent in his religious compositions, the half-hidden medallion that he wears and above all, the direct relationship established between sitter and viewer, have made this figure an iconic image of the Castilian and by extension the Spanish knight.The enormous interest that the painting has aroused in art and literature explains the wide variety of resulting interpretations and identifications, although all of these focus on the sitter’s status as a quintessential Spanish aristocrat, resulting in the somewhat clichéd opinions that have accompanied the painting throughout most of the 20th century in which the sitter is seen as a knightly Christian, melancholy and austere, and a haughty representative of his class and time. At one point it was thought that the painting could be a self-portrait as the gesture of the hand was taken to be a proud statement of self-affirmation by El Greco. Specific names have been proposed for the sitter, including Miguel de Cervantes and Philip II’s secretary Antonio Pérez. Without doubt, the most convincing suggestion has connected this figure with the Second Marquis of Montemayor, Juan de Silva y de Ribera, a contemporary of El Greco who was appointed military commander of the Alcázar in Toledo by Philip II and Chief Notary to the Crown, a position that would explain the solemn gesture of the hand, depicted in the act of taking an oath. Whatever the case, Portrait of a Gentleman with his Hand on his Breast is an excellent example of portraiture of its date, with formal parallels to be found in the type of court portrait introduced by the Habsburgs with their notably simple depictions of the sitters, represented frontally and strongly illuminated against a plain background. Comparable examples are also to be found in Italian Renaissance painting, particularly of the Venetian school, with which El Greco’s technique and composition can most aptly be associated. Such parallels include the gesture of the hand, which is a rhetorical device of great expressivity that helps to convey the sitter’s inner character and which is also to be found in other Venetian and Central European portraits. With or without these parallels, El Greco was fully able to imbue this portrait with a remarkable formal tension between the visible and the hidden.",
+		"room": "room_1",
+		"xpos":1203,
+		"ypos":160,
+		"zpos":670,
+		"rotation":0,
+		"scale_x":1,
+		"scale_y":1,
+		"scale_z":6,
+		"fixed":true,
+		"width":71.12014224028462,
+		"depth":15
+	},
+	{
+		"item_name":"Las tres Gracias",
+		"item_type":2,
+		"model_url":"static/models/js/las_tres_gracias.js",
+		"author": "Peter Paul Rubens",
+		"description":"The Graces were minor deities but in this splendid work Peter Paul Rubens devotes his best effort to them. The three goddesses embrace each other forming a circle. The positioning of their feet suggests movement; they seem to dance gently. The setting is as luscious as the nude bodies of the goddesses. A field illuminated by sunlight filtered through dense trees stretches to a distant blue. The shadows cast by the figures show that they are lit from a source placed opposite the sun; Rubens is not a realist, he strives for effect. All is watered by a fountain crowned by a child with a cornucopia, the horn of abundance. A few touches of paint on his back suggest the presence of a wing. If so, this is Cupid, the child god who is sometimes associated with a problematic kind of love but is shown here in a positive light: the liquid emanating from his fountain is a blessing to the world. From the cornucopia and the branch of a tree hangs a garland of white and red roses in full bloom. They echo the splendour of the Graces, as the forms of the fountain echo their bodies.\n\nThis is a personal painting: Rubens must have made it to keep, as attested by the fact that it was in his collection when he died, and that we do not know of a sketch made for it (he made sketches to show his ideas to either clients or assistants, but not when working for himself). Scholars have long noted that the figure to the left resembles his portraits of his second wife, Helena Fourment. The other two women look at her and may be welcoming her. If we follow this narrative, she could be the owner of the clothes that hang from the branch of a tree - one set of clothes only, roughly contemporary, and not ancient, as would correspond to the goddesses. The idea of making ancient myths relevant by bringing them close to his own time and life is characteristic of Rubens (this is especially evident in the Garden of Love).\n\nWhether Rubens turned the myth of the three Graces into a scene where his wife is received as a third Grace into the realm of the gods by the other two, we will never know. He married Helena in December of 1630, when she was only sixteen and he fifty-three. From that time on he cast on her the eyes of love fulfilled, to judge from many of his paintings. This one is usually dated somewhat later than the wedding, but in truth we do not known when it was painted; it may have been made in connection to that event. The Graces were sometimes mentioned in ancient epithalamia, songs or speeches that were given as part of wedding ceremonies in Ancient Greece and Rome where love and fertility played a major part. Claudian, for example, in his Epithalamium of Honorius and Maria wrote that the \"Graces gather flowers for the feast\".\n\nBe this as it may, this is a wonderful conceit - a gift, we could say, of a plentiful idea of life and the world personified in the female body. In the mythological sources, beginning with Hesiod’s Theogony, the Graces were frequent companions of Venus, adding to the love and fertility that she personifies a component of charm, pleasure, and joy.\n\nIn most sources the Graces are said to be daughters of Zeus and Hera, and were named Aglaia, Euphrosyne, and Thalia, or Brightness, Joyfulness, and Bloom (but Seneca, in his text On Benefits, wrote about these names that \"each one twists the significance of these names to suit himself, and tries to make them fit some theory)\". The Graces were also associated with generosity and reciprocity. Writing about the concept of reciprocity in the Nicomachean Ethics, Aristotle states that good deeds should be repaid in kind: \"This is why we set up a shrine of the Graces in a public place, to remind men to return a kindness\". Statues of the Graces were erected near springs as a way of giving back to nature well before the time of Aristotle. It is interesting that there is an echo of this today in both the Italian and Spanish languages, where the words grazie and gracias mean \"thank you\" - they are used to show gratitude for something received (this was already true of the form gratias agere, \"to thank\" or to \"give thanks\", as used in the fourth century Vulgate, for example, in Matthew 15:36). \"Thanks\" is what Rubens is saying to life and the world with this painting (Vergara, Alejandro, in Mythological Passions, Museo Nacional del Prado, 2021, pp. 168-170).",
+		"room": "room_1",
+		"xpos":1697,
+		"ypos":130,
+		"zpos":770,
+		"rotation":0,
+		"scale_x":2.4,
+		"scale_y":2.18,
+		"scale_z":6,
+		"fixed":true,
+		"width":170,
+		"depth":15
+	},
+	{
+		"item_name":"The Garden of Earthly Delights",
+		"item_type":2,
+		"model_url":"static/models/js/jardin_delicias.js",
+		"author": "El Bosco",
+		"description": "The Garden of Earthly Delights is Bosch’s most complex and enigmatic creation. For Falkenburg the overall theme of The Garden of Earthly Delights is the fate of humanity, as in The Haywain (P02052), although Bosch visualizes this concept very differently and in a much more explicit manner in the centre panel of that triptych than in The Garden of Earthly Delights. In order to analyse the work’s meaning the content of each panel must be identified. On the outer faces of the triptych Bosch depicted in grisaille the Third Day of the Creation of the World, when the waters were separated from the earth and the earthly Paradise (Eden) created. At the top left we see God the Father as the Creator, according to two Latin inscriptions, one on each panel: For he spake, and it was done and For he commanded, and they were created (Psalms 33:9 and 148:5). On the inner face of the triptych, painted in brilliant colours which contrast with the grisaille, Bosch painted three scenes that share the single common denominator of the concept of sin, which starts in Paradise or Eden on the left panel, with Adam and Eve, and is punished in Hell in the right panel. The centre panel depicts a Paradise that deceives the senses, a false Paradise given over to the sin of lust. This deception is encouraged by the fact that the centre panel is shown as a continuation of Eden through the use of a single, continuous landscape with a high horizon line that allows for a broad, panoramic composition arranged as three superimposed planes, in the panels of the earthly Paradise, the Garden of Earthly Delights and Hell.\n\nWhile sin is the connecting link between the three scenes, the iconography in the Paradise panel requires further analysis in order fully to appreciate its meaning. As will be noted below in the analysis of the technical documentation, when he initially embarked on the work Bosch included the Creation of Eve on the left panel, but in a second phase he replaced it with God presenting Eve to Adam. This very uncommon subject was associated with the institution of marriage, as Falkenburg and Vandenbroeck discuss (Bosch, 2016). For the latter, the centre panel represents the false paradise of love, known as Grail in the fifteenth and sixteenth centuries, which implied a carnal interpretation of God’s mandate to Be fruitful and multiply, as instituted in marriage. The men and women that Bosch depicts in the Garden of Earthly Delights believe they are inhabiting a paradise for lovers, but this is false and their only fate is punishment in Hell. The extremely pessimistic message that the centre panel conveys is that of the fragility and ephemeral nature of happiness and delight in these sinful pleasures.\n\nIn the centre panel, from which the triptych derives its name, Bosch included a large number of naked human figures, with the exception of the pair at the lower right, who are usually identified as Adam and Eve after the Expulsion from Paradise. Men and women, both black and white, are generally seen in groups or pairs, maintaining amorous relations with a powerful erotic charge that refers to the panel’s pre-eminent theme, the sin of lust. The animals, both real and imaginary, are much larger than their proper scale. Among them, Bosch particularly emphasizes two different types of owl that evoke evil. Staring straight out, they direct their disturbing gazes at the viewer at the two lateral edges of the panel, slightly set back from the immediate foreground. Also present are plants and fruit, which are again much larger than their scale dimensions. The entire composition is dotted with pieces of red fruit that contrast with other large and small blue ones, these being the two principal colours in the scene. In contrast to the apparent confusion that prevails in the foreground, geometry imposes itself in the middle ground and background. In the former, Bosch depicted a pool full of naked women. Around it, in an anti-clockwise direction, rides a group of men on different mounts (some of them exotic or imaginary), who have been associated with different Cardinal Sins. In the background of the scene Bosch included five fantastical architectural constructions in the water, the central one similar to the fountain of the Four Rivers in the Paradise panel, although here broken to symbolize its fragility and the ephemeral nature of the delights being enjoyed by the men and women who fill this garden. And now the owl depicted inside the fountain in the Paradise panel is replaced here by human figures in sexually explicit poses.\n\nThe right panel depicts Hell and is Bosch’s most striking representation of this subject, on occasions referred to as the musical Hell owing to the significant presence of instruments used to torture sinners who have devoted their time to secular music. In his text in the present catalogue Larry Silver describes the punishments meted out to each sin. While lust prevails in the centre panel, in the scene of Hell all the Cardinal Sins are punished. A good example is the punishment of the avaricious, who are devoured and immediately expelled from the anus of a theriomorphic creature with a bird’s head (a variety of owl) seated on a type of child’s lavatory stool. Gluttons and the sin of gluttony are undoubtedly referred to in the tavern scene located inside the tree-man, in which semi-naked people seated at a table wait to be served toads and other unpleasant creatures by devils, while the envious are tortured by immersion in frozen water. Further punishments correspond to vices censured by society at the time, including board games, while particular social classes are also singled out, including the clergy, who were notably criticized at this period, as reflected in the pig wearing a nun’s veil embracing a naked man in the lower right corner.\n\nAlthough the triptych in the Museo del Prado is not signed, its attribution to Bosch has never been doubted. Its dating, however, is the subject of considerable debate. The results of the dendrochronological analyses could allow it to be located within the early years of the artist’s activity, around 1480-85, as Vermet stated without any supporting evidence. However, the work’s stylistic proximity to the Adoration of the Magi Triptych in the Prado (P02048), which can be securely dated to 1494 following Duquenne’s identification in 2004 of the donors, Peeter Scheyfve and Agneese de Gramme from Antwerp, confirms that the present work must have been painted in the 1490s and not after 1505, as most authors preferred to believe prior to Duquenne’s discovery. It has recently been argued that it must have been painted in or after 1494 as the image of God the Father creating the world on the reverse of the triptych is inspired by a print by Michel Wolgemut of the same subject -including the same text from the Psalms as appears on the wings- which appeared in Hartman Schedelsche Weltchronik published in Nuremberg in 1493.\n\nResearch undertaken in 1967 by Gombrich and Steppe allowed The Garden of Earthly Delights to be associated with the Nassau family. An account by Antonio de Beatis, who accompanied Cardinal Luis de Aragon as his secretary on his trip to the Low Countries, states that on 30 July 1517 the triptych was in the Nassau palace of Coudenberg in Brussels, where De Beatis presumably saw it. Since in the late 1960s the painting was considered to be a late work by Bosch, executed after the death of Engelbert’s II of Nassau in 1504, it was therefore thought that the patron was Henry III of Nassau (1483-1538), Engelbert nephew and heir. In the present day and in the light of the information that locates the triptych in the 1490s, it can be confirmed that it was commissioned from Bosch by Engelbert, who must have intended it for the Coudenberg Palace.",
+		"room": "room_1",
+		"xpos":1450,
+		"ypos":130,
+		"zpos":3,
+		"rotation":0,
+		"scale_x":5.35,
+		"scale_y":1.86,
+		"scale_z":6,
+		"fixed":true,
+		"width":380,
+		"depth":15
+	},
+	{
+		"item_name":"The Crucifixion",
+		"item_type":2,
+		"model_url":"static/models/js/crucifixion.js",
+		"author": "El Greco",
+		"description": "A night view of Calvary with a markedly Eucharistic character. Mary Magdalene, at Christ´s feet, and three angels collecting the blood of the slain Savior, appear framed by the figures of the Virgin and Saint John the Evangelist. Light and color are used to bring dramatic intensity to the chosen subject, generating a night scene with highly contrasted colors. Some figures, such as that of Mary Magdalene, follow Italian models, recalling the artist´s training. Along with other paintings in the Prado Museum (P00821, P00823, P00825, P03888), this was probably painted for the attic of the altarpiece in the church of the Augustine College of María de Aragón in Madrid.\n\nIn 1596 El Greco was commissioned to paint the high altar of the Colegio de la Encarnación (Madrid), an Augustinian seminary better known by the name of its founder, Doña María de Córdoba y Aragón (1539-1593).\n\nThe central part of the bottom section of the altarpiece featured The Annunciation, which had the Adoration of the Shepherd (now in Bucharest) an the Baptism of Christ on either side of it, scenes of the Resurrection and of Pentecost. With the exception of Pentecost, each of these subjects had been painted previously by El Greco, some of them during his Italian period, However, here they are taken up again from a perspective that is particularly original; a perspective that is particularly original; a perspective that is steeped in a more “expressionist” spirituality, and which from 1600 became even more personal and disconcerting, intentionally distanced from contemporary painting.\n\nEl Greco painted the scenes in small spaces, emphasizing the vertical format, and bathing them in a ghostly light that enhances the unreality of the figures, which are arranged in a very marked foreshortening and have very expressive features. The colours-cold, intense and contrasting- are applied very loosely over powerful anatomical constructions, and are perfect examples of El Greco’ s highly personal style in the final stretch of his career.",
+		"room": "room_11",
+		"xpos":3,
+		"ypos":160,
+		"zpos":500,
+		"rotation":0,
+		"scale_x":2.8121428571428533,
+		"scale_y":1.3675876742267448,
+		"scale_z":6,
+		"fixed":true,
+		"width":200,
+		"depth":15
+	},
+	{
+		"item_name":"The 3rd of May 1808 in Madrid, or “The Executions”",
+		"item_type":2,
+		"model_url":"static/models/js/fusilamientos.js",
+		"author": "Francisco de Goya",
+		"description": "A depiction of the execution of patriots from Madrid by a firing squad from Napoleon´s army in reprisal for their uprising against the French occupation on the second of May, 1808. The French soldiers are at the right of the composition, with their backs to the viewer. They aim their rifles at the Madrilenes who are to die. The scene´s drama and tension are emphasized by the use of light, which strongly illuminates the heroes, making it possible to distinguish their characters and attitudes in a detailed psychological character study. Along with its companion, The 2nd of May 1808 in Madrid: the charge of the Mamelukes (P748), this work was made at the initiative of the Reagent, Luis de Boubon in 1814. Both works may have been used to decorate a triumphal arch during the return of Fernando VII to Madrid, or to commemorate the celebrations of the second of May. The lower left side still shows the marks of damage suffered when this canvas was transferred to Valencia in 1937 during the Spanish Civil War.",
+		"room": "room_10",
+		"xpos":800,
+		"ypos":130,
+		"zpos":3,
+		"rotation":0,
+		"scale_x":3.72,
+		"scale_y":2.07,
+		"scale_z":6,
+		"fixed":true,
+		"width":265,
+		"depth":15
+	},
+	{
+		"item_name":"Jacob's Dream",
+		"item_type":2,
+		"model_url":"static/models/js/sueno_jacob.js",
+		"author": "José de Ribera",
+		"description": "This painting tells of Jacob the Patriarch´s mysterious dream, as told in Genesis. He appears asleep, lying on his left shoulder with a tree behind him. On the other side is the ladder of light, by which the angels ascend and descend. This subject demonstrates Ribera´s skill at constructing metaphoric discourse. He uses the image of a shepherd resting in the countryside to describe one of the best-known Bible stories. The foreground view of the solidly constructed figure and the scene´s realistic features bring realism to the miraculous dream described in a ray of light under a blue and gray sky. Here, Ribera offers one of the numerous proofs of his delicate sense of color and his exquisite compositional capacity, masterfully placing the foreground volumes in diagonal contraposition. This is probably one of the paintings mentioned in 1658 in the inventory of don Jerónimo de la Torre, and it remained in his family until 1718. It reappeared in 1746 among Isabel de Farnesio´s paintings, attributed to Murillo.",
+		"room": "room_2",
+		"xpos":3,
+		"ypos":130,
+		"zpos":1500,
+		"rotation":0,
+		"scale_x":3.27,
+		"scale_y":1.85,
+		"scale_z":6,
+		"fixed":true,
+		"width":233,
+		"depth":15
+	},
+	{
+	   "item_name":"The Immaculate Conception",
+	   "item_type":2,
+	   "model_url":"static/models/js/inmaculada_concepcion.js",
+		"author": "Peter Paul Rubens",
+		"description": "Wearing a red tunic, blue robes and a crown of stars, the Virgin treads on a serpent carrying the apple of Sin, in keeping with the customary iconography for this Catholic image. By placing Mary over a globe, Rubens made one of his most striking images of the Immaculate Conception. The two angels carrying a palm and a laurel-leaf crown are a classic reference to Mary´s triumph. References to Classical culture were customary in Rubens, and are strengthened here by the choice of a model based on sculptures of Antiquity.\n\nThis work was made in 1628, during his second visit to Madrid (1628-1629). Although the canvas was originally semicircular, it was later modified to a rectangular format, perhaps at the suggestion of Velázquez. It reflects the characteristics of his mature style, combining the Baroque dynamism of the figures with the ideal of beauty reflected in the Virgin´s face. It was painted for the Marquis of Leganés, who gave it to Felipe IV. The latter sent it to the Monastery of El Escorial, where it was long thought to be by Erasmus Quellinus. From there, it entered the Prado Museum in 1837.",
+	   "room": "room_4",
+		"xpos":3,
+	   "ypos":137,
+	   "zpos":2200,
+	   "rotation":1.5707963267948966,
+	   "scale_x":1.4060714285714284,
+	   "scale_y":1.8648922830364698,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":100,
+	   "depth":15
+	},
+	{
+	   "item_name":"Self-portrait",
+	   "item_type":2,
+	   "model_url":"static/models/js/autorretrato.js",
+	   "author": "Albrecht Dürer",
+	   "description": "In the same year that he published the Apocalipsis cum figuris, Dürer painted himself as a gentleman, dressed in light toned clothes and looking his best. He wears an open black and white doublet with a striped cap in the same colours, an undershirt trimmed with gold and a silk cord of blue and white threads holding up a grey-brown cloak that falls over his right shoulder. Dürer has sheathed the hands that he uses to paint in grey kidskin gloves indicative of high rank with the aim of elevating his social status from that of craftsman to artist and of locating painting among the liberal arts, as in Italy.The artist chose a half-length, three-quarter format with two focuses of attention: the face and hands. He located himself in a room that opens onto the outside through a window in the back wall, following Dieric Bouts’ Portrait of a Man of 1462 (London, National Gallery), a format that was subsequently widely adopted in Flanders and Italy. Basing himself on this Flemish format, Dürer added an Italian monumentality in the verticals and horizontals that create the window surround, also evident in the arrangement of his body which repeats the ‘L’ shape of the window in the bust, firmly supported by the arm leaning on the foreground ledge.Also present in this work is a characteristic of all Dürer’s exquisitely detailed portraits, namely his powers of psychological analysis, evident in the contrast between the sensual features and the cold, penetrating gaze. A painter, printmaker and art theoretician, Albrecht Dürer was born in Nuremberg, gaining fame in his own lifetime through his prints. Dürer trained under the influence of Flemish painting while his two trips to Venice (1494–5 and 1505–7) allowed him to discover the secrets of Renaissance art. A successful portraitist and printmaker, he worked for the Emperor Maximilian I who granted him a pension in 1515, which was renewed by Charles V in 1520. In 1636 the City Council of Nuremberg gave this Self-portrait to Charles I of England. Following Charles’ overthrow and execution, it was sold at his posthumous sale in 1651. The Spanish ambassador Alonso de Cárdenas acquired it for Don Luis de Haro, who gave it to Philip IV in 1654.",
+	   "room": "room_3",
+	   "xpos":403,
+	   "ypos":160,
+	   "zpos":1700,
+	   "rotation":0,
+	   "scale_x":1,
+	   "scale_y":1,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":71.12014224028462,
+	   "depth":15
+	},
+	{
+	   "item_name":"The Cardinal",
+	   "item_type":2,
+	   "model_url":"static/models/js/cardenal.js",
+	   "author": "Raphael",
+	   "description": "Since the moment when it was decided that the present work is by Raphael but that the sitter is not Antonio Granvela, art historians have expended considerable efforts on identifying the sitter.The most credible candidates would seem to be Cardinal Bendinello Suardi (painted by Del Piombo,Washington, National Gallery of Art), and even more probably Cardinal Giovanni Alidosi (depicted on a medal and also in the Disputa in the Stanza della Segnatura), due to the latter’s clear resemblance to the present sitter. However, neither can be clearly identified with the features of this cardinal. Aside from the high quality of the execution, the most striking aspect of this portrait is Raphael’s astonishing natural perceptiveness which results in the definitive and universal image of a Renaissance cardinal (this painting is always referred to as The Cardinal rather than ‘Portrait of a Cardinal)’.The artist achieves this, however, without renouncing a depiction of the individual nature of this sitter, using his way of ‘painting people as more real than they are’, in Bembo’s words. This ability to imitate nature derives from the Flemish portrait, which Italian painters of the second half of the Quattrocento studied with enormous interest. Flemish influence is evident in the masterly modelling of the face, for example in the way that Raphael moved the left eye (a pentimento now visible to the naked eye) to achieve a more penetrating gaze through the contrast with the direction of the turn of the head.The bold handling of the textures of the clothes, such as the sheen on the red silk cape, reveals a direct knowledge of Venetian painting. A point of reference may well be Lorenzo Lotto’s presence in the Vatican in 1509, and his influence on Raphael in the portraits of the figures on the right-hand side of The Mass at Bolsena has been noted on various occasions. In addition, the geometrical rigour of Lotto’s portrait of Bernardo de Rossi may have inspired the markedly hieratic nature of the present cardinal. The painting can be dated to around 1510, the year in which Alidosi died, through its similarity to Raphael’s portrait of Leon X in the National Gallery, London. Its triangular composition clearly derives from Leonardo, in particular the Mona Lisa, evident in the (slightly incorrect) placement of the arm in the foreground whose intention is to diminish the distance between sitter and viewer.The cardinal’s body is reduced to a pyramidal form which acts as a mere support for the head in the manner of Quattrocento Florentine sculpted busts, which do not include arms or other details that detract attention from the face. In this way, and with the figure emerging from a black background that emphasises the sense of his real presence, Raphael imbued his sitter with the solemnity of a statue, creating an unforgettable image in which this individual (as this is, after all, the physical and psychological representation of an individual) becomes the paradigm of the ecclesiastical dignitary that he represents. This is so much the case that art historians attempting to identify the sitter have frequently consulted biographies of cardinals of the day to find one with the refined, astute and impenetrable character of this figure, who certainly corresponds well to Bembo’s description of Cardinal Alidosi:‘for whom faith and religion were never by any means certain, pure or sacred.",
+	   "room": "room_5",
+		"xpos":1050,
+	   "ypos":160,
+	   "zpos":1403,
+	   "rotation":0,
+	   "scale_x":1,
+	   "scale_y":1,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":71.12014224028462,
+	   "depth":15
+	},
+	{
+	   "item_name":"Judith at the Banquet of Holofernes",
+	   "item_type":2,
+	   "model_url":"static/models/js/judit_banquete.js",
+		"author": "Rembrandt",
+		"description": "Standing out against a dark background is the figure of a woman sumptuously attired in an embroidered dress with long, bouffant sleeves, a white silk over-gown with gold braid edging and passementerie fastenings, and a large ermine collar adorned with a gold chain encrusted with rubies and sapphires. She wears a pearl bracelet, double stranded necklace and earrings. Her hair tumbles over her shoulders and is adorned with a string of pearls and a gold chain. She is seated in a violetblue velvet armchair of which only the front of the arms is visible, beside a table covered in a damask cloth on which lies an open book with writing. Her body is turned slightly to the left and her head titled to the right. She leans her left hand on the table and presses her right hand to her breast. Aservant girl who kneels before her with her back to the viewer but in lost profile offers her a goblet consisting of a nautilus shell mounted on a gold stem which contains wine (or at least a pinkish liquid). Both figures are life-sized and depicted three-quarter length. The powerful presence of the main figure is emphasised chiefly by its high perspective with respect to the servant girl -and the viewer- and also by the dramatic use of light and shadow to structure the composition.\n\nThe light entering from the left falls directly on the body of the seated woman, transforming the white over-gown into a powerful glow which in turn illuminates with its reflection the profile of the servant girl, the goblet and the book, while the rest remains in semidarkness. The background is very dark and largely lost owing to the chemical breakdown of the pigments used in that area or to restoration carried out in the late nineteenth or early twentieth century. All that is clearly visible today is the figure of an elderly servant woman located between the seated woman and the young girl with the goblet; she wears a white toque and holds with both hands a cloth from the left of which hangs a cord. On the right, behind the seated woman, the folds of a dark red curtain can be made out. However, an early photograph, hitherto unpublished, clearly shows that there was once a damask curtain similar to the tablecloth between the girl with the goblet and the old servant woman, and that the cloth held by the elderly servant is a half-open sack with a tasselled cord hanging down on one side.\n\nStylistically, the painting combines the formal monumentality that is a feature of Flemish tradition with the characteristically Dutch taste for detail and virtuosity in the rendering of different materials and textures. The small, tight brushstrokes used to model the figures` faces and hands and the goblet contrast with the broad, sweeping strokes employed for the rest of the elements.",
+	   "room": "room_8",
+		"xpos":1850,
+	   "ypos":161.76253631315674,
+	   "zpos":1403,
+	   "rotation":0,
+	   "scale_x":2.1653499999999957,
+	   "scale_y":1.4815533137456394,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":154,
+	   "depth":15
+	},
+	{
+	   "item_name":"The Surrender of Breda",
+	   "item_type":2,
+	   "model_url":"static/models/js/rendicion_breda.js",
+		"author": "Diego Velázquez",
+		"description": "On June 5, 1625 the Dutch governor of Breda, Justinus van Nassau, surrendered the keys of that city to Ambrosio Spínola, the Genoese general commanding the Spanish tercios (a group of soldiers that included pikemen, swordsmen and musketeers) of Flanders. Breda`s extraordinary strategic importance made it one of the most disputed cities in the Spanish monarchy`s prolonged war against the United Provinces of the North. Its conquest after a lengthy siege was considered a military accomplishment of the first order, generating a plethora of texts and images intended to exalt the winners. It is therefore not surprising that the decision to decorate the Buen Retiro Palace`s Hall of Realms with a series of paintings narrating the military triumphs of Philip IV`s reign called for a depiction of what was probably the most resounding victory of all. Nor is it any surprise that Velázquez, who was then the court`s most prestigious painter, was commissioned to paint it. As with his equestrian portrait of Philip IV (P01178), the artist proudly declares his authorship and his stylistic singularity on a sheet of bank paper appearing in the composition`s lower right corner. The painting`s dimensions, the importance of the event it depicts and the significance of the hall where it was to hang all encouraged the painter to put his best efforts into this work, offering proof of his extraordinary faculties. Additional pressure came from the competitive context, as the Hall of Realms included works by the court`s most outstanding artists. Velázquez met the challenge with a masterpiece that reveals not only his extraordinary descriptive gifts and mastery of aerial perspective, but also his narrative skills and his capacity to place all of a painting`s elements at the service of a specific content.\n\nAs numerous scholars have pointed out, this is no ordinary pictorial celebration of victory or martial ideals -its smoking background speaks clearly of destruction, war and death- but it does concentrate our attention on the foreground, where the triumphant general receives the key from his vanquished foe with an attitude closely resembling affection, in a gesture that seems more like the announcement of impending peace than that of war`s end. The entire composition is designed to emphasize this gesture, and both the group of Dutch soldiers (at the left) and the Spaniards serve to frame, accompany and shelter this principal motif, drawing our attention directly to it. The two generals constitute an image that conveys the message with extraordinary efficiency, and historians have related it to extremely varied sources and antecedents from both profane symbolism (Andrea Alciato`s Emblematum liber) and Christian iconography. In fact, Velázquez`s interpretation of the battle has very precise precedents: both Hermann Hugo, in his historical treatise, Obsidio bredana, and Pedro Calderón de la Barca, in one of his plays, approached the subject in a similar way, insisting on the magnanimity of General Spínola and his army, who treated their enemy with the respect they deserved as worthy rivals, rather than the disdain meted out to the vanquished. Indeed, Calderón`s The Seige of Breda, from 1635, describes the very event depicted in the painting in much the same terms, as an almost friendly encounter. A very similar content is also transmitted by Juan Bautista Maíno`s The Recovery of Bahia in 1625 (P885). Velázquez`s genius lies in having discovered the ideal formula for transmitting that content, which he did by eliminating all rhetoric and drawing instead on the most straightforward, and thus the most efficient means: the simple gesture of the two generals is enough to transmit a theory of State and a view of history. Generically, this painting can be dated between 1634 and 1635, as the decoration of the Hall of Realms is known to have begun in 1634 and was finished by spring, 1635.",
+	   "room": "room_7",
+		"xpos":2003,
+	   "ypos":135.34411251335598,
+	   "zpos":1750,
+	   "rotation":1.5707963267948966,
+	   "scale_x":3.515178571428564,
+	   "scale_y":2.279312790377906,
+	   "scale_z":5.9820523235845915,
+	   "fixed":true,
+	   "width":250,
+	   "depth":15
+	},
+	{
+	   "item_name":"Guernica",
+	   "item_type":2,
+	   "model_url":"static/models/js/guernica.js",
+		"author": "Pablo Picasso",
+		"description": "An accurate depiction of a cruel, dramatic situation, Guernica was created to be part of the Spanish Pavilion at the International Exposition in Paris in 1937. Pablo Picasso’s motivation for painting the scene in this great work was the news of the German aerial bombing of the Basque town whose name the piece bears, which the artist had seen in the dramatic photographs published in various periodicals, including the French newspaper L'Humanité. Despite that, neither the studies nor the finished picture contain a single allusion to a specific event, constituting instead a generic plea against the barbarity and terror of war. The huge picture is conceived as a giant poster, testimony to the horror that the Spanish Civil War was causing and a forewarning of what was to come in the Second World War. The muted colours, the intensity of each and every one of the motifs and the way they are articulated are all essential to the extreme tragedy of the scene, which would become the emblem for all the devastating tragedies of modern society.\n\nGuernica has attracted a number of controversial interpretations, doubtless due in part to the deliberate use in the painting of only greyish tones. Analysing the iconography in the painting, one Guernica scholar, Anthony Blunt, divides the protagonists of the pyramidal composition into two groups, the first of which is made up of three animals; the bull, the wounded horse and the winged bird that can just be made out in the background on the left. The second group is made up of the human beings, consisting of a dead soldier and a number of women: the one on the upper right, holding a lamp and leaning through a window, the mother on the left, wailing as she holds her dead child, the one rushing in from the right and finally the one who is crying out to the heavens, her arms raised as a house burns down behind her.\n\nAt this point it should be remembered that two years earlier, in 1935, Picasso had done the etching Minotauromaquia, a synthetic work condensing into a single image all the symbols of his cycle dedicated to the mythological creature, which stands as Guernica’s most direct relative.\nIncidents in Picasso’s private life and the political events afflicting Europe between the wars fused together in the motifs the painter was using at the time, resulting both in Guernica itself and all the studies and ‘postscripts’, regarded as among the most representative works of art of the 20th century.",
+	   "room": "room_14",
+		"xpos":2897,
+	   "ypos":135.34411251335598,
+	   "zpos":600,
+	   "rotation":0,
+	   "scale_x":6.046107142857131,
+	   "scale_y":2.2793127903779067,
+	   "scale_z":5.982052323584862,
+	   "fixed":true,
+	   "width":430,
+	   "depth":15
+	},
+	{
+	   "item_name":"Saturn",
+	   "item_type":2,
+	   "model_url":"static/models/js/saturno.js",
+		"author": "Francisco de Goya",
+		"description": "The mural paintings that decorated the house known as “la Quinta del Sordo,” where Goya lived have come to be known as the Black Paintings, because he used so many dark pigments and blacks in them, and also because of their somber subject matter. The private and intimate character of that house allowed the artist to express himself with great liberty. He painted directly on the walls in what must have been mixed technique, as chemical analysis reveals the use of oils in these works. The Baron Émile d´Erlanger acquired “la Quinta” in 1873 and had the paintings transferred to canvas. The works suffered enormously in the process, losing a large amount of paint. Finally, the Baron donated these paintings to the State, and they were sent to the Prado Museum, where they have been on view since 1889.\n\nSaturn devouring one of his sons is one of the most expressive images from his Black Paintings. It occupied the wall across from Leocadia Zorrilla (P00754) on the ground floor of “la Quinta del Sordo.” This mythological god could be the personification of such a human feeling as the fear of losing one´s power. The mural paintings from “la Quinta del Sordo” (the Black Paintings), have been determinant in the modern-day consideration of this painter from Aragon. The German Expressionists and the Surrealist movement, as well as representative of other contemporary artistic movements, including literature and even cinema, have seen the origins of modern art in this series of compositions by an aged Goya, isolated in his own world and creating with absolute liberty.",
+	   "room": "room_13",
+		"xpos":1800,
+	   "ypos":146.0179969561399,
+	   "zpos":3,
+	   "rotation":-7.463684199160717e-19,
+	   "scale_x":1.0264321428571404,
+	   "scale_y":1.4815533137456394,
+	   "scale_z":5.982052323584916,
+	   "fixed":true,
+	   "width":73,
+	   "depth":15
+	},
+	{
+	   "item_name":"The Meadow of San Isidro",
+	   "item_type":2,
+	   "model_url":"static/models/js/pradera_san_isidro.js",
+		"author": "Francisco de Goya",
+		"description": "Goya never actually painted the cartoon for this scene, which is one of his masterpieces, and the most popular of a series intended for the bedroom of the infantas in Madrid's El Pardo Palace. The project was suspended following the death of Carlos III. Here, the painter manages to capture the sensation of life and the hustle and bustle of a crowd sitting in the meadow. The landscape opens onto the Manzanares River and the background offers a panoramic view of Madrid, where the beauty of light and color are joined by the precision of the topography, including the huge buildings of the Royal Palace and the Seminary, as well as the large dome of the church of San Francisco el Grande, and other perfectly recognizable towers.",
+	   "room": "room_13",
+		"xpos":2149.09037334974,
+	   "ypos":138.61324207959194,
+	   "zpos":10,
+	   "rotation":-7.463684199160717e-19,
+	   "scale_x":1.3217071428571403,
+	   "scale_y":0.46622307075911723,
+	   "scale_z":5.982052323584916,
+	   "fixed":true,
+	   "width":94,
+	   "depth":15
+	},
+	{
+	   "item_name": "Landscape with Psyche and Jupiter",
+	   "item_type":2,
+	   "model_url":"static/models/js/paisaje_jupiter.js",
+		"author": "Rubens & Paul Bril",
+		"description": "On a number of occasions, Peter Paul Rubens partially overpainted finished pictures. He did this to paintings by his own hand, such as Nymphs and Satyrs (P1666), which he retouched and enlarged twenty years after he first painted it. He also made changes to drawings and paintings by other artists that he owned. This painting is an example of such reworking, albeit in a radical mode that changed the subject from a scene of asceticism to one of eroticism. The picture was originally made by Paul Bril, who was trained in Antwerp and active in Rome from about 1575 until his death in 1626. Bril was one of the most successful landscape painters in Italy, where he worked for popes and other prominent patrons. This painting bears the date 1610 (on a rock in the lower-left corner), a time when Bril was at the height of his popularity. An X-ray of the painting shows that where we now see a nude woman and an eagle, there was originally a kneeling Saint Jerome holding a stone in his right hand. A hermit, Saint Jerome was frequently presented in landscape paintings, and part of his red cloth robe is still visible in front of the woman´s left foot. After purchasing this painting, either in Italy or Antwerp, Rubens decided to alter it. This must have happened after 1625, however, because the Antwerp artist Marten Ryckaert (1587-1631) made a closely related (though not identical) copy of Bril´s original painting dated to that year. In this picture, Rubens covered up the saint, and in his place painted a nude woman and the eagle that we now see. The style of the figure and the eagle are fully characteristic of Rubens, and his particular handling of the brush can also be discerned in the selective changes that he made to the landscape background: in the rock and branches to the left of the eagle; in the area behind it, which was originally part of the rock; and in the spray and mist rising from the waterfall just to the right of Psyche, among other areas. With these changes, Rubens transformed Bril´s painting of the penitent saint in subject and scope, adding to it the vital pulse and sense of life that are so typical of his landscapes. The subject of this painting was identified as the story of Psyche when the work was listed in Rubens´s collection after his death. Indeed, the eagle (Jupiter) and the woman (Psyche) are characters from the novel Metamorphoses, also known as The Golden Ass, by the Roman writer Apuleius (c. 124-probably after 170 CE). The only novel from antiquity to survive in its entirety, The Golden Ass was well known during Rubens´s time, serving as an important source for artists. While the tale of Cupid and Psyche, which accounts for a long section of the book, was frequently depicted by artists, the representation of Psyche and Jupiter was rare. One exception exists in the work of the Italian artist Giulio Romano (1499-1546), whose fresco cycle in the Sala di Psiche in the Palazzo del Te in Mantua (c. 1532-35) was inspired by the same section of Apuleius´s text. Rubens knew this precedent well, because he had been court painter in Mantua during his long stay in Italy from 1600 to 1608. The story of Psyche and Jupiter that Rubens illustrates is taken from Book VI (13-15) of Apuleius´s novel. The reading of this text may well have prompted Rubens to make the changes to the landscape by Bril that he owned. At one point in the story, Venus asks Psyche, \"Do you see that steep mountain peak, rising above those towering cliffs? Dark waters flow from a black fountain there, down to the nearby valley´s confined depths, and they feed the swamps of Styx, and the bitter stream of Cocytus.\" Psyche herself was frightened by the dramatic landscape: \"A, high and immense rock wall, jagged, precarious, and inaccessible, emitted dread streams from jaws of stone, flowing downwards from their precipitous source.\" Characteristically, Rubens saw the sedate landscape by Bril in similarly dramatic terms, and decided to change it. Also true to form, Rubens followed Apuleius´s narrative closely -he was exceptional in his interest and comprehension of classical texts and one of the most erudite painters of his time. Rubens painted the eagle as it takes the cup from the hand of Psyche to fill it with water: \"Now, pass me that phial\"! Jupiter ordered Psyche, and \"he snatched it from her hand.\" The river where the cup will be filled is in the background. Near the right corner is a dragon-like creature, one of the fierce serpents mentioned by Apuleius. Rubens was undoubtedly inspired to paint Psyche as a nude because of his reading of The Golden Ass, which has many erotic passages, or because of Giulio Romano´s racy fresco paintings that he knew in Mantua. Rubens´s painting arrived in Spain after it was purchased by Philip IV from the painter´s collection following Rubens´s death in 1640. The king installed it in a room of the Alcazar Palace known as the retiradizo, together with other mythological and allegorical nudes.",
+	   "room": "room_13",
+		"xpos":2297,
+	   "ypos":151.56680443095098,
+	   "zpos":650,
+	   "rotation":0,
+	   "scale_x":1.8138321428571393,
+	   "scale_y":1.0774933190877383,
+	   "scale_z":5.9820523235848615,
+	   "fixed":true,
+	   "width":129,
+	   "depth":15
+	},
+	{
+	   "item_name":"David with the Head of Goliath",
+	   "item_type":2,
+	   "model_url":"static/models/js/david_goliat.js",
+		"author": "Caravaggio",
+		"description": "The Bible story (Samuel 1:17) depicted here corresponds to the moment when, as a young shepherd, David kills Goliath, the giant, with his sling and cuts off his head to triumphantly exhibit it. The episode of tying the giant’s tresses to reveal his head has no iconographic precedent and is not explicitly mentioned in the Bible, making this work yet another example of Caravaggio’s originality and independence.\n\nThis painting is first listed in an inventory of the Buen Retiro Palace in Madrid in 1794. Its previous history is unknown but it is thought, with some reservation, to be from the collection of Juan Bautista Crescenzi. This collector with a known predilection for modern artists-that is, naturalists- arrived in Madrid in 1617 and died there in 1635. Alternatively, it may have been brought to Spain by the Count of Villamediana, who was in Italy between 1611 and 1615. According to Bellori, he owned a David by Caravaggio. Finally, though less likely, it could be the David of Caravaggio that Monsignor Galeotto Rospigliosi left in his will in 1643. The painting’s presence in Spain is borne out by some period copies, all of which were made in a Spanish context.\n\nDuring the 19th century, this canvas was attributed to the school of Caravaggio, and while it was later included in that master’s catalog, some critics considered it an ancient copy of a lost original. Caravaggio’s authorship was finally demonstrated by Mina Gregori, who published an X-ray of it that shows the first version of the giant’s head, with a dramatic expression, bulging eyes and a gaping mouth whose terrifying appearance recalls Medusa (Florence, Galleria degli Uffizi) and Holofernes (Rome, Galleria Nazionale d’Arte Antica), two paintings in which Caravaggio successfully expresses the horror of physical pain. This expression may have been changed because that painter’s client considered it excessively violent. In any case, the X-ray certifies that the canvas is an original Caravaggio. Attention has been drawn to the expressive containment of the head in the shadows, which contrasts with the customary image of David as winner, as well as the tight composition, which resembles no other work by this artist except for Narcissus (Rome, Galleria Nazionale d’Arte Antica), with its geometric scheme- based, here, on a rectangle.\n\nAs to this painting’s date: specialists agree that it is from the artist’s relatively youthful period, somewhere between 1596 and 1600.",
+	   "room": "room_6",
+		"xpos":2597,
+	   "ypos":151.56680443095098,
+	   "zpos":1200,
+	   "rotation":-1.5707963267948966,
+	   "scale_x":1.2795249999999976,
+	   "scale_y":1.1396563951889533,
+	   "scale_z":5.9820523235845915,
+	   "fixed":true,
+	   "width":91,
+	   "depth":15
+	},
+	{
+	   "item_name":"Gaspar de Guzmán, Count-Duke of Olivares, on Horseback",
+	   "item_type":2,
+	   "model_url":"static/models/js/olivares.js",
+		"author": "Diego Velázquez",
+		"description": "Along with Philip IV and Velázquez, the third name intimately associated with the Buen Retiro Palace is Gaspar de Guzmán, Count-Duke of Olivares (1587-1645). When Philip IV took the throne in 1621 he was only sixteen years old, and he delegated a considerable part of his work as ruler to Olivares, who was then thirty-four and had proved to be a very skilled politician with an extraordinary capacity for work. From then on, the latter´s power grew, and by the 1630s, it had reached a very high level indeed. It was probably Olivares´ idea to build the palace, which was constructed on his own land in order to provide an adequate setting for projecting the splendor of the then still powerful Spanish court.\n\nThe Count-Duke had a notable iconographic presence as the subject of portraits by extremely important artists, including Rubens and most of all, Velázquez, who became his protégé when he settled in Madrid. While almost all his likenesses convey his leading role in the structure of the State, none transmit his power and authority with the clarity of the present equestrian portrait.\n\nThis work´s style and its model´s fall from grace in early 1643 suggest that it was painted in the 1630s, following the classicist works that Velázquez painted after returning from his first visit to Italy. In that chronological framework, two hypotheses have been proposed. Its considerable similarity to the figure of the Duke of Feria in Jusepe Leonardo´s The Capture of Breisach (P00859) suggests that it precedes the latter work, which was painted between 1633 and 1635 for the Hall of Realms. However, some critics have identified the battle in the background of Velázquez´s work as the taking of Fuenterrabía, an important military event that occurred in 1638, which would force us to date the painting after that. However, the most important characteristic of Fuenterrabía is its coastal character, so it seems strange that it would be depicted in a painting with a river crossed by a bridge.\n\nIt is unnecessary to specifically identify the battle in the background in order to understand its significance and function. Velázquez was very subtle in his choice of contents and models, and here he is not only depicting the Count-Duke of Olivares; he is also transmitting the fact that he is not a king, but instead, the king´s favorite. This becomes clear when comparing the present work to the Equestrian Portrait of Philip IV (P01178), where Velázquez transmits all the monarch´s royal majesty, depicting him in a relaxed, tranquil manner before a broad landscape. Philip IV was naturally the king -it was his destiny by birth. His favorite, however, had reached his position thanks to his own hard work and a series of political virtues, and that fact is transmitted here. Instead of Philip IV´s severe profile, Olivares is depicted in a foreshortened position that brings a sense of violence and dynamism to his likeness. Those qualities are further emphasized by his attitude. Rather than looking undauntedly forward, he casts his energetic and arrogant gaze directly upon the viewer, and the same qualities are also underlined by the manner in which the rider and his steed occupy almost the entire foreground.\n\nPhilip IV´s clothing and insignias speak of his military responsibilities simply by marking him as the king. In the case of Olivares, however, the painter has to convey them in a more explicit manner, therefore, the Count-Duke is shown directing a battle depicted in highly realistic terms in the background, with fallen horses and clouds of smoke. Painted for the Count-Duke himself, this portrait is the finest expression of the power he had attained by the time the Buen Retiro Palace was being built. It entered the Royal Collections in 1769, when Charles III acquired it at the auction of the Marquis of la Ensenada´s property.",
+	   "room": "room_15",
+		"xpos":2450,
+	   "ypos":133.26643590825483,
+	   "zpos":503,
+	   "rotation":0,
+	   "scale_x":2.17941071428571,
+	   "scale_y":2.0721025367071877,
+	   "scale_z":5.982052323584997,
+	   "fixed":true,
+	   "width":155,
+	   "depth":15
+	},
+	{
+	   "item_name":"Venus and Adonis",
+	   "item_type":2,
+	   "model_url":"static/models/js/venus_adonis.js",
+		"author": "Titian",
+		"description": "The first Poesie presented to Prince Philip were Danaë (1553, The Wellington Collection) and Venus and Adonis (1554), versions of other previous works, but endowed with all the prestige of the commissioning party. In turn, these works became models for numerous replicas.\n\nTitian painted the first Venus and Adonis, which was lost but is known from the copies that were made of it, at the end of the 1520´s. After his experience in the Camerino d´Alabastro, which familiarised him with mythology, Titian felt secure enough to visualise a scene not described in Ovid or any other classical or contemporary source: the action of Adonis extracting himself from Venus´ embrace. Titian´s deviation from the canonical sources, which incurred the reproach of Raffaello Borghini in 1584, has prompted historians to seek alternative literary sources. Beroqui pointed to the Fábula de Adonis, Hipómenes y Atalanta by Diego Hurtado de Mendoza, published in Venice in 1553, at the same time that Titian was working on the painting, but written during Mendoza´s years as the Emperor´s ambassador in Venice (1539-45), when he enjoyed close relations with Titian. More recently, Hosono Kiyo put forward as possible sources two works by Ludovico Dolce, the Favola d´Adone (Venice, 1545), in which Adonis rises from Venus with arrows in his hand, and Didone (Venice, 1547), in which Dido seeks to restrain Aeneas as Venus does Adonis. However, the dating of Titian´s invenzione to the 1520s permits us to consider a new option: that both Hurtado de Mendoza and Dolce were inspired by Titian. Dolce himself, in a passage in L´Aretino, admits that a work of pictorial art need not rely on a literary source and he goes further, saying that to contemplate a painting or a sculpture can inspire a writer. Although Dolce cites a watercolor supposedly by Raphael to illustrate his reasoning, he could as well have had in mind Titian´s Venus and Adonis.\n\nTitian took up this theme again twenty years later in various compositions, one of which served as the point pf departure for the work belonging to the Museo del Prado. In this painting, produced in 1554, Titian presents the goddess with her back to us, demonstrating, in conjunction with the works Danaë (The Wellington Collection) and Venus and Adonis, that painting can represent different points of view, in a similar manner to sculpture.",
+	   "room": "room_9",
+		"xpos":2650,
+	   "ypos":133.79601033522684,
+	   "zpos":1803,
+	   "rotation":0,
+	   "scale_x":2.9105678571428513,
+	   "scale_y":1.9270553591376847,
+	   "scale_z":5.982052323584591,
+	   "fixed":true,
+	   "width":207,
+	   "depth":15
+	},
+	{
+	   "item_name":"Christ falls on the Way to Calvary",
+	   "item_type":2,
+	   "model_url":"static/models/js/caida_calvario.js",
+		"author": "Giovanni Domenico Tiepolo",
+		"description": "Dressed in white with the Crown of Thorns, Jesus has fallen under the weight of the Cross, on the path to Calvary. Behind him are Simon of Cyrene, who helps him with the Cross, and the Holy Women, one of whom carries the sign with the inscription INRI with will later be placed on the Cross; as well as a group of people who accompany Jesus to mount Golgotha, where he is to be crucified. Golgotha is visible in the background on the left. The scene depicted here narrates a passage from the New Testament Passion (Matthew 27, 32-33; Mark 15, 21-22; Luke 23, 26 and John 19, 17). A preparatory sketch for this work is at the Lázaro Galdiano Museum in Madrid.\n\nThere is another characteristic of this series, which gives the whole series a strong personality. This is due either to limitations of a contract that has not yet been found, or to other circumstances. Indeed, it may be explained by the creation of a deliberately claustrophobic atmosphere by Giandomenico, unlike other canvases by this artist portraying similar themes. On this scene, he sought to create an almost unbreathable sense of drama, even though the narrative takes place outdoors. With this purpose in mind, he piled up the characters essential to the drama in the foreground, as well as a few others, but not many. This piling creates an unsettling atmosphere that invites us to reflect on the events depicted. This, the artificial gradient of colours, the theatrical props and the almost expressionistic value of some of the faces, confer the whole scene a deliberately unreal atmosphere. It takes us, at the same time, to an event of special religious significance and incomparable dramatic possibilities. This is perhaps the most important characteristic of the whole series. The combination of all the technical and expressive resources to reach a dramatic atmosphere, which would be alien to the world created by the Tiepolos, apparently more capable of creating ‘effects’ than of stimulating ‘feelings.’",
+	   "room": "room_11",
+		"xpos":200,
+	   "ypos":130,
+	   "zpos":3,
+	   "rotation":0,
+	   "scale_x":2.1,
+	   "scale_y":2.17,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":150,
+	   "depth":15
+	},
+	{
+	   "item_name":"Hercules fighting the Nemean Lion",
+	   "item_type":2,
+	   "model_url":"static/models/js/hercules_nemea.js",
+		"author": "Francisco de Zurbarán",
+		"description": "A lion was ravishing the region of Nemea and frightening its inhabitants to such a degree that they could no longer work the land. The Marquis of Villena’s Twelve Labors of Hercules, along with Juan Pérez de Moya’s Secret Philosophy (1585) and Baltasar de Victoria’s Theater of the Gods of the Pagan World (1620-1624), were almost certainly the reference texts for the conception of the Labors of Hercules series for the Hall of Realms. Villena set this scene in the rough, stony surroundings that had become the lion’s refuge, as is reflected in the print that accompanies his narrative. Zurbarán gave his landscape the same appearance, unlike other engravings often proposed as his main compositional references. These include Cornelis Cort’s (1533-1578) series on the same subject, which is based on drawings by Frans Floris and others that Hans Sebald Beham created in the 1540s. For the present work, Zurbarán follows Cort’s print in his placement of the hero, and Beham’s in his conception and location of the lion, who is upright when Hercules attacks and strangles him with his arms after first employing the garrote that appears on the ground in the foreground of Zurbarán’s painting. In his narration of this moment, Villena emphasizes the animal’s fierceness. In this painting, the animal’s head is the element that crowns the pyramidal composition formed by the two intertwined figures, although Hercules’s is partially hidden by his right forearm. The scene’s dramatic force is further emphasized by the evening light that bathes Hercules’s body, bringing out his powerful musculature and his effort. This use of light is repeated throughout the series to focus the viewer’s attention on the hero with whom Philip IV identified as legitimate successor to the Habsburgs and to the Spanish throne. As with other stories of Hercules vanquishing a monster or a fabled animal after a difficult struggle, his triumph over the Nemean lion symbolizes the hero’s valor, and thus, that of the king and the monarchy. It also represents the triumph of virtue over evil and discord. In this specific episode, the Marquis of Villena views the Nemean lion as a representation of hubris and vice. By killing and skinning him, Hercules brought virtue and peace to the states. And after killing him, Hercules wore his pelt, which became one of his characteristic attributes and is also considered a protective element.",
+	   "room": "room_10",
+		"xpos":610,
+	   "ypos":140,
+	   "zpos":597,
+	   "rotation":0,
+	   "scale_x":2.33,
+	   "scale_y":1.55,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":166,
+	   "depth":15
+	},
+	{
+	   "item_name":"Guitar and Newspaper",
+	   "item_type":2,
+	   "model_url":"static/models/js/guitarra.js",
+		"author": "Juan Gris",
+		"description": "",
+	   "room": "room_12",
+		"xpos":1199,
+	   "ypos":140,
+	   "zpos":800,
+	   "rotation":0,
+	   "scale_x":1.40,
+	   "scale_y":0.82,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":100,
+	   "depth":15
+	},
+	{
+	   "item_name":"A la deriva",
+	   "item_type":2,
+	   "model_url":"static/models/js/alta_mar.js",
+		"author": "Salvador Abril y Blasco",
+		"description": "Valencia, 1862 - Valencia, 1924\n\nPintor y ceramista español. Estudió en la Escuela de Bellas Artes de San Carlos de su ciudad natal, especializándose en la pintura de marinas. Concurrió con asiduidad a las Exposiciones Nacionales de Bellas Artes, y obtuvo tercera medalla en la edición de 1887 con el cuadro En alta mar.",
+	   "room": "room_12",
+		"xpos":900,
+	   "ypos":130,
+	   "zpos":997,
+	   "rotation":0,
+	   "scale_x":4.50,
+	   "scale_y":2.07,
+	   "scale_z":6,
+	   "fixed":true,
+	   "width":320,
+	   "depth":15
+	}
+
+	]
+}

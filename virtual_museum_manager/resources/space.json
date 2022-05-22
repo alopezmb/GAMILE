@@ -1,0 +1,1190 @@
+[
+  {
+    "room_name": "room_1",
+    "vertices": [
+      {
+        "x": 1200,
+        "y": 0
+      },
+      {
+        "x": 1700,
+        "y": 0
+      },
+      {
+        "x": 1700,
+        "y": 1000
+      },
+      {
+        "x": 2000,
+        "y": 1000
+      },
+      {
+        "x": 2000,
+        "y": 1400
+      },
+      {
+        "x": 1700,
+        "y": 1400
+      },
+      {
+        "x": 1700,
+        "y": 2400
+      },
+      {
+        "x": 1200,
+        "y": 2400
+      },
+      {
+        "x": 1200,
+        "y": 1400
+      },
+      {
+        "x": 900,
+        "y": 1400
+      },
+      {
+        "x": 900,
+        "y": 1000
+      },
+      {
+        "x": 1200,
+        "y": 1000
+      }
+    ],
+    "connected_rooms": [
+      1,
+      2,
+      5,
+      6,
+      8,
+      10,
+      13
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 1350.0,
+          "y": 2400
+        },
+        "p_end": {
+          "x": 1550.0,
+          "y": 2400
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 1200.5,
+          "y": 1850.0
+        },
+        "p_end": {
+          "x": 1200.5,
+          "y": 1950.0
+        },
+        "connects_to_room": "5"
+      },
+      {
+        "p_start": {
+          "x": 1699.5,
+          "y": 1850.0
+        },
+        "p_end": {
+          "x": 1699.5,
+          "y": 1950.0
+        },
+        "connects_to_room": "8"
+      },
+      {
+        "p_start": {
+          "x": 900.5,
+          "y": 1150.0
+        },
+        "p_end": {
+          "x": 900.5,
+          "y": 1250.0
+        },
+        "connects_to_room": "2"
+      },
+      {
+        "p_start": {
+          "x": 1999.5,
+          "y": 1150.0
+        },
+        "p_end": {
+          "x": 1999.5,
+          "y": 1250.0
+        },
+        "connects_to_room": "6"
+      },
+      {
+        "p_start": {
+          "x": 1699.5,
+          "y": 450.0
+        },
+        "p_end": {
+          "x": 1699.5,
+          "y": 550.0
+        },
+        "connects_to_room": "13"
+      },
+      {
+        "p_start": {
+          "x": 1200.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 1200.5,
+          "y": 350.0
+        },
+        "connects_to_room": "10"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The Annunciation",
+        "location": {
+          "x": 1203,
+          "y": 1650
+        }
+      },
+      {
+        "name": "Las Meninas",
+        "location": {
+          "x": 1697,
+          "y": 1590
+        }
+      },
+      {
+        "name": "The Nobleman with his Hand on his Chest",
+        "location": {
+          "x": 1203,
+          "y": 670
+        }
+      },
+      {
+        "name": "Las tres Gracias",
+        "location": {
+          "x": 1697,
+          "y": 770
+        }
+      },
+      {
+        "name": "The Garden of Earthly Delights",
+        "location": {
+          "x": 1450,
+          "y": 3
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_2",
+    "vertices": [
+      {
+        "x": 0,
+        "y": 1000
+      },
+      {
+        "x": 900,
+        "y": 1000
+      },
+      {
+        "x": 900,
+        "y": 1400
+      },
+      {
+        "x": 400,
+        "y": 1400
+      },
+      {
+        "x": 400,
+        "y": 2000
+      },
+      {
+        "x": 0,
+        "y": 2000
+      }
+    ],
+    "connected_rooms": [
+      1,
+      3,
+      4,
+      11
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 899.5,
+          "y": 1150.0
+        },
+        "p_end": {
+          "x": 899.5,
+          "y": 1250.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 600.0,
+          "y": 1399.5
+        },
+        "p_end": {
+          "x": 700.0,
+          "y": 1399.5
+        },
+        "connects_to_room": "3"
+      },
+      {
+        "p_start": {
+          "x": 150.0,
+          "y": 1999.5
+        },
+        "p_end": {
+          "x": 250.0,
+          "y": 1999.5
+        },
+        "connects_to_room": "4"
+      },
+      {
+        "p_start": {
+          "x": 250.0,
+          "y": 1000.5
+        },
+        "p_end": {
+          "x": 350.0,
+          "y": 1000.5
+        },
+        "connects_to_room": "11"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Jacob's Dream",
+        "location": {
+          "x": 3,
+          "y": 1500
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_3",
+    "vertices": [
+      {
+        "x": 400,
+        "y": 1400
+      },
+      {
+        "x": 900,
+        "y": 1400
+      },
+      {
+        "x": 900,
+        "y": 2000
+      },
+      {
+        "x": 400,
+        "y": 2000
+      }
+    ],
+    "connected_rooms": [
+      2,
+      4,
+      5
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 899.5,
+          "y": 1650.0
+        },
+        "p_end": {
+          "x": 899.5,
+          "y": 1750.0
+        },
+        "connects_to_room": "5"
+      },
+      {
+        "p_start": {
+          "x": 600.0,
+          "y": 1400.5
+        },
+        "p_end": {
+          "x": 700.0,
+          "y": 1400.5
+        },
+        "connects_to_room": "2"
+      },
+      {
+        "p_start": {
+          "x": 600.0,
+          "y": 1999.5
+        },
+        "p_end": {
+          "x": 700.0,
+          "y": 1999.5
+        },
+        "connects_to_room": "4"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Self-portrait",
+        "location": {
+          "x": 403,
+          "y": 1700
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_4",
+    "vertices": [
+      {
+        "x": 0,
+        "y": 2000
+      },
+      {
+        "x": 900,
+        "y": 2000
+      },
+      {
+        "x": 900,
+        "y": 2400
+      },
+      {
+        "x": 0,
+        "y": 2400
+      }
+    ],
+    "connected_rooms": [
+      2,
+      3,
+      5
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 899.5,
+          "y": 2150.0
+        },
+        "p_end": {
+          "x": 899.5,
+          "y": 2250.0
+        },
+        "connects_to_room": "5"
+      },
+      {
+        "p_start": {
+          "x": 600.0,
+          "y": 2000.5
+        },
+        "p_end": {
+          "x": 700.0,
+          "y": 2000.5
+        },
+        "connects_to_room": "3"
+      },
+      {
+        "p_start": {
+          "x": 150.0,
+          "y": 2000.5
+        },
+        "p_end": {
+          "x": 250.0,
+          "y": 2000.5
+        },
+        "connects_to_room": "2"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The Immaculate Conception",
+        "location": {
+          "x": 3,
+          "y": 2200
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_5",
+    "vertices": [
+      {
+        "x": 900,
+        "y": 1400
+      },
+      {
+        "x": 1200,
+        "y": 1400
+      },
+      {
+        "x": 1200,
+        "y": 2400
+      },
+      {
+        "x": 900,
+        "y": 2400
+      }
+    ],
+    "connected_rooms": [
+      1,
+      3,
+      4
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 1199.5,
+          "y": 1850.0
+        },
+        "p_end": {
+          "x": 1199.5,
+          "y": 1950.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 900.5,
+          "y": 1650.0
+        },
+        "p_end": {
+          "x": 900.5,
+          "y": 1750.0
+        },
+        "connects_to_room": "3"
+      },
+      {
+        "p_start": {
+          "x": 900.5,
+          "y": 2150.0
+        },
+        "p_end": {
+          "x": 900.5,
+          "y": 2250.0
+        },
+        "connects_to_room": "4"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The Cardinal",
+        "location": {
+          "x": 1050,
+          "y": 1403
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_6",
+    "vertices": [
+      {
+        "x": 2000,
+        "y": 1000
+      },
+      {
+        "x": 2600,
+        "y": 1000
+      },
+      {
+        "x": 2600,
+        "y": 1400
+      },
+      {
+        "x": 2000,
+        "y": 1400
+      }
+    ],
+    "connected_rooms": [
+      1,
+      7,
+      13
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 2000.5,
+          "y": 1150.0
+        },
+        "p_end": {
+          "x": 2000.5,
+          "y": 1250.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 2100.0,
+          "y": 1000.5
+        },
+        "p_end": {
+          "x": 2200.0,
+          "y": 1000.5
+        },
+        "connects_to_room": "13"
+      },
+      {
+        "p_start": {
+          "x": 2250.0,
+          "y": 1399.5
+        },
+        "p_end": {
+          "x": 2350.0,
+          "y": 1399.5
+        },
+        "connects_to_room": "7"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "David with the Head of Goliath",
+        "location": {
+          "x": 2597,
+          "y": 1200
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_7",
+    "vertices": [
+      {
+        "x": 2000,
+        "y": 1400
+      },
+      {
+        "x": 2900,
+        "y": 1400
+      },
+      {
+        "x": 2900,
+        "y": 1800
+      },
+      {
+        "x": 2400,
+        "y": 1800
+      },
+      {
+        "x": 2400,
+        "y": 2400
+      },
+      {
+        "x": 2000,
+        "y": 2400
+      }
+    ],
+    "connected_rooms": [
+      6,
+      8,
+      9,
+      14
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 2250.0,
+          "y": 1400.5
+        },
+        "p_end": {
+          "x": 2350.0,
+          "y": 1400.5
+        },
+        "connects_to_room": "6"
+      },
+      {
+        "p_start": {
+          "x": 2700.0,
+          "y": 1400.5
+        },
+        "p_end": {
+          "x": 2800.0,
+          "y": 1400.5
+        },
+        "connects_to_room": "14"
+      },
+      {
+        "p_start": {
+          "x": 2000.5,
+          "y": 2150.0
+        },
+        "p_end": {
+          "x": 2000.5,
+          "y": 2250.0
+        },
+        "connects_to_room": "8"
+      },
+      {
+        "p_start": {
+          "x": 2399.5,
+          "y": 2050.0
+        },
+        "p_end": {
+          "x": 2399.5,
+          "y": 2150.0
+        },
+        "connects_to_room": "9"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The Surrender of Breda",
+        "location": {
+          "x": 2003,
+          "y": 1750
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_8",
+    "vertices": [
+      {
+        "x": 1700,
+        "y": 1400
+      },
+      {
+        "x": 2000,
+        "y": 1400
+      },
+      {
+        "x": 2000,
+        "y": 2400
+      },
+      {
+        "x": 1700,
+        "y": 2400
+      }
+    ],
+    "connected_rooms": [
+      1,
+      7
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 1700.5,
+          "y": 1850.0
+        },
+        "p_end": {
+          "x": 1700.5,
+          "y": 1950.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 1999.5,
+          "y": 2150.0
+        },
+        "p_end": {
+          "x": 1999.5,
+          "y": 2250.0
+        },
+        "connects_to_room": "7"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Judith at the Banquet of Holofernes",
+        "location": {
+          "x": 1850,
+          "y": 1403
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_9",
+    "vertices": [
+      {
+        "x": 2400,
+        "y": 1800
+      },
+      {
+        "x": 2900,
+        "y": 1800
+      },
+      {
+        "x": 2900,
+        "y": 2400
+      },
+      {
+        "x": 2400,
+        "y": 2400
+      }
+    ],
+    "connected_rooms": [
+      7
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 2400.5,
+          "y": 2050.0
+        },
+        "p_end": {
+          "x": 2400.5,
+          "y": 2150.0
+        },
+        "connects_to_room": "7"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Venus and Adonis",
+        "location": {
+          "x": 2650,
+          "y": 1803
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_10",
+    "vertices": [
+      {
+        "x": 400,
+        "y": 0
+      },
+      {
+        "x": 1200,
+        "y": 0
+      },
+      {
+        "x": 1200,
+        "y": 600
+      },
+      {
+        "x": 400,
+        "y": 600
+      }
+    ],
+    "connected_rooms": [
+      1,
+      11,
+      12
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 1199.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 1199.5,
+          "y": 350.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 400.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 400.5,
+          "y": 350.0
+        },
+        "connects_to_room": "11"
+      },
+      {
+        "p_start": {
+          "x": 850.0,
+          "y": 599.5
+        },
+        "p_end": {
+          "x": 950.0,
+          "y": 599.5
+        },
+        "connects_to_room": "12"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The 3rd of May 1808 in Madrid, or \u201cThe Executions\u201d",
+        "location": {
+          "x": 800,
+          "y": 3
+        }
+      },
+      {
+        "name": "Hercules fighting the Nemean Lion",
+        "location": {
+          "x": 610,
+          "y": 597
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_11",
+    "vertices": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 400,
+        "y": 0
+      },
+      {
+        "x": 400,
+        "y": 600
+      },
+      {
+        "x": 600,
+        "y": 600
+      },
+      {
+        "x": 600,
+        "y": 1000
+      },
+      {
+        "x": 0,
+        "y": 1000
+      }
+    ],
+    "connected_rooms": [
+      2,
+      10,
+      12
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 250.0,
+          "y": 999.5
+        },
+        "p_end": {
+          "x": 350.0,
+          "y": 999.5
+        },
+        "connects_to_room": "2"
+      },
+      {
+        "p_start": {
+          "x": 599.5,
+          "y": 750.0
+        },
+        "p_end": {
+          "x": 599.5,
+          "y": 850.0
+        },
+        "connects_to_room": "12"
+      },
+      {
+        "p_start": {
+          "x": 399.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 399.5,
+          "y": 350.0
+        },
+        "connects_to_room": "10"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "The Crucifixion",
+        "location": {
+          "x": 3,
+          "y": 500
+        }
+      },
+      {
+        "name": "Christ falls on the Way to Calvary",
+        "location": {
+          "x": 200,
+          "y": 3
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_12",
+    "vertices": [
+      {
+        "x": 600,
+        "y": 600
+      },
+      {
+        "x": 1200,
+        "y": 600
+      },
+      {
+        "x": 1200,
+        "y": 1000
+      },
+      {
+        "x": 600,
+        "y": 1000
+      }
+    ],
+    "connected_rooms": [
+      10,
+      11
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 600.5,
+          "y": 750.0
+        },
+        "p_end": {
+          "x": 600.5,
+          "y": 850.0
+        },
+        "connects_to_room": "11"
+      },
+      {
+        "p_start": {
+          "x": 850.0,
+          "y": 600.5
+        },
+        "p_end": {
+          "x": 950.0,
+          "y": 600.5
+        },
+        "connects_to_room": "10"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Guitar and Newspaper",
+        "location": {
+          "x": 1199,
+          "y": 800
+        }
+      },
+      {
+        "name": "A la deriva",
+        "location": {
+          "x": 900,
+          "y": 997
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_13",
+    "vertices": [
+      {
+        "x": 1700,
+        "y": 0
+      },
+      {
+        "x": 2300,
+        "y": 0
+      },
+      {
+        "x": 2300,
+        "y": 1000
+      },
+      {
+        "x": 1700,
+        "y": 1000
+      }
+    ],
+    "connected_rooms": [
+      1,
+      6,
+      14
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 1700.5,
+          "y": 450.0
+        },
+        "p_end": {
+          "x": 1700.5,
+          "y": 550.0
+        },
+        "connects_to_room": "1"
+      },
+      {
+        "p_start": {
+          "x": 2100.0,
+          "y": 999.5
+        },
+        "p_end": {
+          "x": 2200.0,
+          "y": 999.5
+        },
+        "connects_to_room": "6"
+      },
+      {
+        "p_start": {
+          "x": 2150,
+          "y": 950.5
+        },
+        "p_end": {
+          "x": 2150,
+          "y": 1050.5
+        },
+        "connects_to_room": "6"
+      },
+      {
+        "p_start": {
+          "x": 2299.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 2299.5,
+          "y": 350.0
+        },
+        "connects_to_room": "14"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Saturn",
+        "location": {
+          "x": 1800,
+          "y": 3
+        }
+      },
+      {
+        "name": "The Meadow of San Isidro",
+        "location": {
+          "x": 2149.09037334974,
+          "y": 10
+        }
+      },
+      {
+        "name": "Landscape with Psyche and Jupiter",
+        "location": {
+          "x": 2297,
+          "y": 650
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_14",
+    "vertices": [
+      {
+        "x": 2300,
+        "y": 0
+      },
+      {
+        "x": 2900,
+        "y": 0
+      },
+      {
+        "x": 2900,
+        "y": 1400
+      },
+      {
+        "x": 2600,
+        "y": 1400
+      },
+      {
+        "x": 2600,
+        "y": 500
+      },
+      {
+        "x": 2300,
+        "y": 500
+      }
+    ],
+    "connected_rooms": [
+      7,
+      13,
+      15
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 2300.5,
+          "y": 250.0
+        },
+        "p_end": {
+          "x": 2300.5,
+          "y": 350.0
+        },
+        "connects_to_room": "13"
+      },
+      {
+        "p_start": {
+          "x": 2600.5,
+          "y": 700.0
+        },
+        "p_end": {
+          "x": 2600.5,
+          "y": 800.0
+        },
+        "connects_to_room": "15"
+      },
+      {
+        "p_start": {
+          "x": 2700.0,
+          "y": 1399.5
+        },
+        "p_end": {
+          "x": 2800.0,
+          "y": 1399.5
+        },
+        "connects_to_room": "7"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Guernica",
+        "location": {
+          "x": 2897,
+          "y": 600
+        }
+      }
+    ]
+  },
+  {
+    "room_name": "room_15",
+    "vertices": [
+      {
+        "x": 2300,
+        "y": 500
+      },
+      {
+        "x": 2600,
+        "y": 500
+      },
+      {
+        "x": 2600,
+        "y": 1000
+      },
+      {
+        "x": 2300,
+        "y": 1000
+      }
+    ],
+    "connected_rooms": [
+      14
+    ],
+    "doors": [
+      {
+        "p_start": {
+          "x": 2599.5,
+          "y": 700.0
+        },
+        "p_end": {
+          "x": 2599.5,
+          "y": 800.0
+        },
+        "connects_to_room": "14"
+      }
+    ],
+    "exhibits": [
+      {
+        "name": "Gaspar de Guzm\u00e1n, Count-Duke of Olivares, on Horseback",
+        "location": {
+          "x": 2450,
+          "y": 503
+        }
+      }
+    ]
+  }
+]

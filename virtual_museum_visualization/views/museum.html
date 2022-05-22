@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Museum</title>
+    <meta charset="utf-8"/>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/example.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/sidebar.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row main-row">
+        <!-- Main View -->
+        <div class="col-xs-12 main">
+
+            <!-- 3D Viewer -->
+            <div id="viewer">
+
+                <div id="username-container">
+                    <a class="btn btn-default btn-sm ui-btn" id="user">
+                        <span>{{user.username}}</span>
+                        <div class="vertical-divider">
+                             <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                    </a>
+                </div> <!--End Username Container -->
+
+                <div id="tour-info-container">
+
+                    <div class="tour-info">
+                         <a class="btn btn-sm ui-btn">
+                            <span id="tour-points">0</span>
+                            <div class="vertical-divider">
+                                 <span class="glyphicon glyphicon-scale"></span>
+                            </div>
+                         </a>
+                    </div>
+                    <div class="tour-info">
+                        <a class="btn btn-sm ui-btn">
+                            <span id="tour-time">00:00:00</span>
+                            <div class="vertical-divider">
+                                 <span class="glyphicon glyphicon-time"></span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div><!-- End Tour Info Container -->
+
+                <div id="toggle-fullscreen" class="fullscreen-icon-container">
+                    <span class="glyphicon glyphicon-fullscreen"></span>
+                </div>
+                <!-- Loading Modal-->
+                <div id="loading-modal">
+                    <div class="loader-container">
+                        <div class="bar">
+                            <div class="circle"></div>
+                            <p>Loading</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End Viewer -->
+
+            <!-- Floorplanner (Not in use, keep because it is difficult to remove it without breaking stuff -->
+            <div id="floorplanner">
+                <canvas id="floorplanner-canvas"></canvas>
+            </div>
+
+            <!-- Item Context Menu -->
+             <div id="item-context-menu">
+                <div class="st-menu st-effect-1">
+
+                    <div class="header">
+                        <div class="titles">
+                            <h3 id="painting-title" class="painting-title">Portrait Title</h3>
+                            <h4 id="painting-author" class="painting-author">Author</h4>
+                        </div>
+                        <div class="qr-container">
+                            <div id="qrcode"></div>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-divider"></div>
+                    <p class="painting-description">
+                        <span id="painting-description" dir="ltr"></span>
+                    </p>
+                    <div class="close-wrapper">
+                        <i class="glyphicon glyphicon-arrow-left"></i>
+                    </div>
+                </div>
+             </div>
+            <!-- End Item Context Menu-->
+
+            <!-- Show this message when painting is not in selectable fov -->
+            <div class="move-closer-message">
+                 <p class="move-closer">Move closer to select the painting!</p>
+             </div>
+
+            <!-- Side Navbar-->
+            <div id="sidebar-container" class="st-effect-1 st-menu-open">
+                <nav class="st-menu st-effect-1" id="menu-1">
+                    <h2 class="icon icon-lab">Menu</h2>
+                    <span class="glyphicon glyphicon-remove close-sidebar"></span>
+                    <ul>
+                      <li>
+                          <a id="museum">
+                              <span class="glyphicon glyphicon-home"></span>
+                              <span>Museum Tour</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a id="museum-reset-tour">
+                              <span class="glyphicon glyphicon-repeat"></span>
+                              <span>Reset Visit</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a id="logout">
+                              <span class="glyphicon glyphicon-off"></span>
+                              <span>Logout</span>
+                          </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- End Side Navbar-->
+
+            <!-- Welcome Message-->
+            <div id="welcome-modal">
+                <div class="welcome-card">
+                    <p>Welcome to the virtual museum!</p>
+                    <button class="btn btn-sm bg-primary" id="start-tour">Start Tour</button>
+                </div>
+            </div>
+
+        </div><!-- End Main View -->
+    </div><!-- End Main Row -->
+</div><!-- End Container Fluid -->
+
+<script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/qrcode.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/three.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/ramen.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/example.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+
+</body>
+</html>

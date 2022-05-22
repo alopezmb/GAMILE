@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container h-100 login-box">
+
+    <div class="row h-100 justify-content-center">
+        {% if success is not defined or not success %}
+             <form action="/register" method="post" class="my-auto border rounded bg-white p-4 w-100">
+               <div class="form-group text-center">
+                   <h3 class="text-bold">Register</h3>
+               </div>
+               <div class="form-group">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Enter email">
+               </div>
+               <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+               </div>
+               <div class="form-group">
+                  <label for="exampleInputPassword1">Verify Password</label>
+                  <input type="password" class="form-control"
+                         id="password_confirmation"
+                         name="password_confirmation"
+                         placeholder="Retype password">
+               </div>
+               {% if error_message is defined %}
+               <p class="text-center text-danger">{{error_message}}</p>
+               {% endif %}
+               <div class="row justify-content-center mt-4">
+                  <button type="submit" class="btn w-50 btn-primary">Register</button>
+               </div>
+               <p class="registration-prompt">Already a user? Login in <a href="/login">here</a></p>
+            </form>
+        {% else %}
+            <div class="my-auto border rounded bg-success p-2 w-100">
+                <p class="text-center">Registration successful.
+                    Click <a href="/login">here</a> to log in.
+                </p>
+            </div>
+        {% endif %}
+    </div>
+
+</div>
+
+
+{% endblock %}

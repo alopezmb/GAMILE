@@ -1,0 +1,36 @@
+body{
+    background: #009bff;
+    background: -webkit-linear-gradient(left,#0072ff,#00c6ff);
+    background: -o-linear-gradient(left,#0072ff,#00c6ff);
+    background: -moz-linear-gradient(left,#0072ff,#00c6ff);
+    background: linear-gradient(left,#0072ff,#00c6ff);
+}
+
+div.container.login-box{
+    max-width: 400px;
+}
+
+div.container.login-box .form-group{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+label{
+    font-weight: bold;
+}
+
+div.container.login-box p.registration-prompt{
+    font-size: 11px;
+    text-align: center;
+     margin-top: 10px;
+}
+
+p.registration-prompt a{
+    color: #007bff;
+}
+
+p.registration-prompt a:hover{
+    color: #ffa500;
+}
+

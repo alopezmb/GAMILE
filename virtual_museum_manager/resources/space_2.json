@@ -1,0 +1,805 @@
+[
+	{
+		"room_name":"room_1",
+		"vertices": [
+			{"x":1200, "y":0},
+			{"x":1700, "y":0},
+			{"x":1700, "y":1000},
+			{"x":2000, "y":1000},
+			{"x":2400, "y":1400},
+			{"x":1700, "y":1400},
+			{"x":1700, "y":2400},
+			{"x":1200, "y":2400},
+			{"x":1200, "y":1400}
+		],
+		"connected_rooms": [2,5,6,8,10,13],
+		"doors":[
+			{
+				"p_start":{"x":1350,"y":2400},
+				"p_end": {"x":1550,"y":2400},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":37,"y":49},
+				"p_end": {"x":37,"y":52},
+				"connects_to_room": 2
+			},
+			{
+				"p_start":{"x":45,"y":79},
+				"p_end": {"x":45,"y":82},
+				"connects_to_room": 5
+			},
+			{
+				"p_start":{"x":63,"y":49},
+				"p_end": {"x":63,"y":52},
+				"connects_to_room": 6
+			},
+				{
+				"p_start":{"x":55,"y":79},
+				"p_end": {"x":55,"y":82},
+				"connects_to_room": 8
+			},
+			{
+				"p_start":{"x":45,"y":11},
+				"p_end": {"x":45,"y":14},
+				"connects_to_room": 10
+			},
+			{
+				"p_start":{"x":55,"y":11},
+				"p_end": {"x":55,"y":14},
+				"connects_to_room": 13
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_1",
+				"popularity": "popular",
+				"location": {"x":56, "y":42}
+			},
+			{
+				"name": "Exhibit 2_1",
+				"popularity": "popular",
+				"location": {"x":56, "y":58}
+			},
+			{
+				"name": "Exhibit 3_1",
+				"popularity": "popular",
+				"location": {"x":44, "y":58}
+			},
+			{
+				"name": "Exhibit 4_1",
+				"popularity": "popular",
+				"location": {"x":44, "y":42}
+
+			},
+			{
+				"name": "Exhibit 5_1",
+				"popularity": "popular",
+				"location": {"x":50, "y":50}
+
+			},
+			{
+				"name": "Exhibit 6_1",
+				"popularity": "common",
+				"location": {"x":46, "y":70}
+
+			},
+			{
+				"name": "Exhibit 7_1",
+				"popularity": "common",
+				"location": {"x":54, "y":70}
+
+			},
+			{
+				"name": "Exhibit 8_1",
+				"popularity": "common",
+				"location": {"x":46, "y":25}
+
+			},
+			{
+				"name": "Exhibit 9_1",
+				"popularity": "common",
+				"location": {"x":54, "y":25}
+
+			},
+			{
+				"name": "Exhibit 10_1",
+				"popularity": "common",
+				"location": {"x":50, "y":1}
+
+			}
+		]
+
+	},
+	{
+		"room_name":"room_2",
+		"vertices": [
+			{"x":0, "y":43},
+			{"x":37, "y":43},
+			{"x":37, "y":57},
+			{"x":14, "y":57},
+			{"x":11, "y":60},
+			{"x":11, "y":85},
+			{"x":0, "y":85}
+		],
+		"connected_rooms": [1,3,4,11],
+		"doors":[
+			{
+				"p_start":{"x":37,"y":49},
+				"p_end": {"x":37,"y":52},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":23,"y":57},
+				"p_end": {"x":25,"y":57},
+				"connects_to_room": 3
+			},
+			{
+				"p_start":{"x":4,"y":85},
+				"p_end": {"x":6,"y":85},
+				"connects_to_room": 4
+			},
+			{
+				"p_start":{"x":4,"y":43},
+				"p_end": {"x":6,"y":43},
+				"connects_to_room": 11
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_2",
+				"popularity": "common",
+				"location": {"x":30, "y":44}
+			},
+			{
+				"name": "Exhibit 2_2",
+				"popularity": "common",
+				"location": {"x":1, "y":50}
+			},
+			{
+				"name": "Exhibit 3_2",
+				"popularity": "common",
+				"location": {"x":10, "y":70}
+			}
+
+		]
+
+	},
+	{
+		"room_name":"room_3",
+		"vertices": [
+			{"x":11, "y":60},
+			{"x":14, "y":57},
+			{"x":37, "y":57},
+			{"x":37, "y":85},
+			{"x":11, "y":85}
+		],
+		"connected_rooms": [2,4,5],
+		"doors":[
+			{
+				"p_start":{"x":23,"y":57},
+				"p_end": {"x":25,"y":57},
+				"connects_to_room": 2
+			},
+			{
+				"p_start":{"x":23,"y":85},
+				"p_end": {"x":25,"y":85},
+				"connects_to_room": 4
+			},
+			{
+				"p_start":{"x":37,"y":69},
+				"p_end": {"x":37,"y":72},
+				"connects_to_room": 5
+			}
+
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_3",
+				"popularity": "common",
+				"location": {"x":18, "y":58}
+			},
+			{
+				"name": "Exhibit 2_3",
+				"popularity": "common",
+				"location": {"x":12, "y":78}
+			},
+			{
+				"name": "Exhibit 3_3",
+				"popularity": "common",
+				"location": {"x":36, "y":80}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_4",
+		"vertices": [
+			{"x":0, "y":85},
+			{"x":37, "y":85},
+			{"x":37, "y":100},
+			{"x":0, "y":100}
+		
+		],
+		"connected_rooms": [2,3,5],
+		"doors":[
+			{
+				"p_start":{"x":4,"y":85},
+				"p_end": {"x":6,"y":85},
+				"connects_to_room": 2
+			},
+			{
+				"p_start":{"x":23,"y":85},
+				"p_end": {"x":25,"y":85},
+				"connects_to_room": 3
+			},
+			{
+				"p_start":{"x":37,"y":91},
+				"p_end": {"x":37,"y":94},
+				"connects_to_room": 5
+			}
+
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_4",
+				"popularity": "common",
+				"location": {"x":1, "y":92}
+			},
+			{
+				"name": "Exhibit 2_4",
+				"popularity": "common",
+				"location": {"x":18, "y":87}
+			},
+			{
+				"name": "Exhibit 3_4",
+				"popularity": "common",
+				"location": {"x":30, "y":99}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_5",
+		"vertices": [
+			{"x":37, "y":57},
+			{"x":42, "y":57},
+			{"x":45, "y":60},
+			{"x":45, "y":100},
+			{"x":37, "y":100}
+		],
+		"connected_rooms": [1,3,4],
+		"doors":[
+			{
+				"p_start":{"x":45,"y":79},
+				"p_end": {"x":45,"y":82},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":37,"y":69},
+				"p_end": {"x":37,"y":72},
+				"connects_to_room": 3
+			},
+			{
+				"p_start":{"x":37,"y":91},
+				"p_end": {"x":37,"y":94},
+				"connects_to_room": 4
+			}
+
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_5",
+				"popularity": "common",
+				"location": {"x":41, "y":58}
+			},
+			{
+				"name": "Exhibit 2_5",
+				"popularity": "common",
+				"location": {"x":44, "y":94}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_6",
+		"vertices": [
+			{"x":63, "y":43},
+			{"x":88, "y":43},
+			{"x":88, "y":57},
+			{"x":63, "y":57}
+			
+		],
+		"connected_rooms": [1,7,13],
+		"doors":[
+			{
+				"p_start":{"x":63,"y":49},
+				"p_end": {"x":63,"y":52},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":74,"y":57},
+				"p_end": {"x":76,"y":57},
+				"connects_to_room": 7
+			},
+			{
+				"p_start":{"x":70,"y":43},
+				"p_end": {"x":72,"y":43},
+				"connects_to_room": 13
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_6",
+				"popularity": "common",
+				"location": {"x":78, "y":44}
+			},
+			{
+				"name": "Exhibit 2_6",
+				"popularity": "common",
+				"location": {"x":87, "y":50}
+			},
+			{
+				"name": "Exhibit 3_6",
+				"popularity": "common",
+				"location": {"x":78, "y":56}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_7",
+		"vertices": [
+			{"x":63, "y":57},
+			{"x":100, "y":57},
+			{"x":100, "y":75},
+			{"x":81, "y":75},
+			{"x":78, "y":78},
+			{"x":78, "y":100},
+			{"x":63, "y":100}
+		],
+		"connected_rooms": [6,8,9,16],
+		"doors":[
+			{
+				"p_start":{"x":74,"y":57},
+				"p_end": {"x":76,"y":57},
+				"connects_to_room": 6
+			},
+			{
+				"p_start":{"x":63,"y":91},
+				"p_end": {"x":63,"y":94},
+				"connects_to_room": 8
+			},
+			{
+				"p_start":{"x":78,"y":86},
+				"p_end": {"x":78,"y":89},
+				"connects_to_room": 9
+			},
+			{
+				"p_start":{"x":89,"y":75},
+				"p_end": {"x":91,"y":75},
+				"connects_to_room": 9
+			},
+			{
+				"p_start":{"x":93,"y":57},
+				"p_end": {"x":95,"y":57},
+				"connects_to_room": 16
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_7",
+				"popularity": "common",
+				"location": {"x":99, "y":66}
+			},
+			{
+				"name": "Exhibit 2_7",
+				"popularity": "common",
+				"location": {"x":64, "y":75}
+			},
+			{
+				"name": "Exhibit 3_7",
+				"popularity": "common",
+				"location": {"x":77, "y":95}
+			}
+		]
+	},
+	{
+		"room_name":"room_8",
+		"vertices": [
+
+			{"x":55, "y":60},
+			{"x":58, "y":57},
+			{"x":63, "y":57},
+			{"x":63, "y":100},
+			{"x":55, "y":100}
+		],
+		"connected_rooms": [1,7],
+		"doors":[
+			{
+				"p_start":{"x":55,"y":79},
+				"p_end": {"x":55,"y":82},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":63,"y":91},
+				"p_end": {"x":63,"y":94},
+				"connects_to_room": 7
+			}
+
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_8",
+				"popularity": "common",
+				"location": {"x":56, "y":66}
+			},
+			{
+				"name": "Exhibit 2_8",
+				"popularity": "common",
+				"location": {"x":62, "y":70}
+			},
+			{
+				"name": "Exhibit 3_8",
+				"popularity": "common",
+				"location": {"x":59, "y":99}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_9",
+		"vertices": [
+			{"x":78, "y":78},
+			{"x":81, "y":75},
+			{"x":100, "y":75},
+			{"x":100, "y":100},
+			{"x":78, "y":100}
+		],
+		"connected_rooms": [7],
+		"doors":[
+			{
+				"p_start":{"x":78,"y":86},
+				"p_end": {"x":78,"y":89},
+				"connects_to_room": 7
+			},
+			{
+				"p_start":{"x":89,"y":75},
+				"p_end": {"x":91,"y":75},
+				"connects_to_room": 7
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_9",
+				"popularity": "common",
+				"location": {"x":84, "y":76}
+			},
+			{
+				"name": "Exhibit 2_9",
+				"popularity": "common",
+				"location": {"x":99, "y":90}
+			},
+			{
+				"name": "Exhibit 3_9",
+				"popularity": "common",
+				"location": {"x":83, "y":99}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_10",
+		"vertices": [
+			{"x":11, "y":0},
+			{"x":45, "y":0},
+			{"x":45, "y":25},
+			{"x":14, "y":25},
+			{"x":11, "y":22}
+		],
+		"connected_rooms": [1,11,12],
+		"doors":[
+			{
+				"p_start":{"x":45,"y":11},
+				"p_end": {"x":45,"y":14},
+				"connects_to_room": 1
+			},
+			{
+				"p_start":{"x":11,"y":11},
+				"p_end": {"x":11,"y":14},
+				"connects_to_room": 11
+			},
+			{
+				"p_start":{"x":34,"y":25},
+				"p_end": {"x":36,"y":25},
+				"connects_to_room": 12
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_10",
+				"popularity": "common",
+				"location": {"x":35, "y":1}
+			},
+			{
+				"name": "Exhibit 2_10",
+				"popularity": "common",
+				"location": {"x":44, "y":20}
+			},
+			{
+				"name": "Exhibit 3_10",
+				"popularity": "common",
+				"location": {"x":20, "y":24}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_11",
+		"vertices": [
+			{"x":0, "y":0},
+			{"x":11, "y":0},
+			{"x":11, "y":22},
+			{"x":14, "y":25},
+			{"x":25, "y":25},
+			{"x":25, "y":43},
+			{"x":0, "y":43}
+		],
+		"connected_rooms": [2,10,12],
+		"doors":[
+			{
+				"p_start":{"x":4,"y":43},
+				"p_end": {"x":6,"y":43},
+				"connects_to_room": 2
+			},
+			{
+				"p_start":{"x":11,"y":11},
+				"p_end": {"x":11,"y":14},
+				"connects_to_room": 10
+			},
+			{
+				"p_start":{"x":25,"y":33},
+				"p_end": {"x":25,"y":36},
+				"connects_to_room": 12
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_11",
+				"popularity": "common",
+				"location": {"x":5, "y":1}
+			},
+			{
+				"name": "Exhibit 2_11",
+				"popularity": "common",
+				"location": {"x":1, "y":34}
+			},
+			{
+				"name": "Exhibit 3_11",
+				"popularity": "common",
+				"location": {"x":20, "y":27}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_12",
+		"vertices": [
+			{"x":25, "y":25},
+			{"x":45, "y":25},
+			{"x":45, "y":40},
+			{"x":42, "y":43},
+			{"x":25, "y":43}
+		],
+		"connected_rooms": [10,11],
+		"doors":[
+			{
+				"p_start":{"x":34,"y":25},
+				"p_end": {"x":36,"y":25},
+				"connects_to_room": 10
+			},
+			{
+				"p_start":{"x":25,"y":33},
+				"p_end": {"x":25,"y":36},
+				"connects_to_room": 11
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_12",
+				"popularity": "common",
+				"location": {"x":26, "y":28}
+			},
+			{
+				"name": "Exhibit 2_12",
+				"popularity": "common",
+				"location": {"x":35, "y":42}
+			},
+			{
+				"name": "Exhibit 3_12",
+				"popularity": "common",
+				"location": {"x":44, "y":34}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_13",
+		"vertices": [
+			{"x":55, "y":0},
+			{"x":85, "y":0},
+			{"x":85, "y":19},
+			{"x":78, "y":19},
+			{"x":75, "y":22},
+			{"x":75, "y":43},
+			{"x":58, "y":43},
+			{"x":55, "y":40}
+			
+		],
+		"connected_rooms": [1,6,14,15],
+		"doors":[
+			{
+				"p_start":{"x":55,"y":11},
+				"p_end": {"x":55,"y":14},
+				"connects_to_room": 1
+			},
+			{
+			"p_start":{"x":70,"y":43},
+			"p_end": {"x":72,"y":43},
+			"connects_to_room": 6
+			},
+			{
+			"p_start":{"x":85,"y":9},
+			"p_end": {"x":85,"y":12},
+			"connects_to_room": 14
+			},
+			{
+			"p_start":{"x":80,"y":19},
+			"p_end": {"x":82,"y":19},
+			"connects_to_room": 15
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_13",
+				"popularity": "common",
+				"location": {"x":70, "y":1}
+			},
+			{
+				"name": "Exhibit 2_13",
+				"popularity": "common",
+				"location": {"x":56, "y":25}
+			},
+			{
+				"name": "Exhibit 3_13",
+				"popularity": "common",
+				"location": {"x":63, "y":42}
+			}
+		]
+
+	},
+	{
+		"room_name":"room_14",
+		"vertices": [
+			{"x":85, "y":0},
+			{"x":100, "y":0},
+			{"x":100, "y":22},
+			{"x":88, "y":22},
+			{"x":85, "y":19}
+		],
+		"connected_rooms": [13,16],
+		"doors":[
+				{
+				"p_start":{"x":85,"y":9},
+				"p_end": {"x":85,"y":12},
+				"connects_to_room": 13
+				},
+				{
+				"p_start":{"x":93,"y":22},
+				"p_end": {"x":95,"y":22},
+				"connects_to_room": 16
+				}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_14",
+				"popularity": "common",
+				"location": {"x":93, "y":1}
+			},
+			{
+				"name": "Exhibit 2_14",
+				"popularity": "common",
+				"location": {"x":99, "y":18}
+			}
+
+		]
+
+	},
+	{
+		"room_name":"room_15",
+		"vertices": [
+			{"x":75, "y":22},
+			{"x":78, "y":19},
+			{"x":85, "y":19},
+			{"x":88, "y":22},
+			{"x":88, "y":43},
+			{"x":75, "y":43}
+		],
+		"connected_rooms": [13,16],
+		"doors":[
+			{
+			"p_start":{"x":80,"y":19},
+			"p_end": {"x":82,"y":19},
+			"connects_to_room": 13
+			},
+			{
+			"p_start":{"x":88,"y":30},
+			"p_end": {"x":88,"y":33},
+			"connects_to_room": 16
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_15",
+				"popularity": "common",
+				"location": {"x":76, "y":25}
+			},
+			{
+				"name": "Exhibit 2_15",
+				"popularity": "common",
+				"location": {"x":87, "y":27}
+			},
+			{
+				"name": "Exhibit 2_15",
+				"popularity": "common",
+				"location": {"x":84, "y":42}
+			}
+		]
+	},
+	{
+		"room_name":"room_16",
+		"vertices": [
+			{"x":88, "y":22},
+			{"x":100, "y":22},
+			{"x":100, "y":57},
+			{"x":88, "y":57}
+		],
+		"connected_rooms": [7,14,15],
+		"doors":[
+			{
+				"p_start":{"x":93,"y":57},
+				"p_end": {"x":95,"y":57},
+				"connects_to_room": 7
+			},
+			{
+				"p_start":{"x":93,"y":22},
+				"p_end": {"x":95,"y":22},
+				"connects_to_room": 14
+			},
+			{
+			"p_start":{"x":88,"y":30},
+			"p_end": {"x":88,"y":33},
+			"connects_to_room": 15
+			}
+		],
+		"exhibits":[
+			{
+				"name": "Exhibit 1_16",
+				"popularity": "common",
+				"location": {"x":99, "y":24}
+			},
+			{
+				"name": "Exhibit 2_16",
+				"popularity": "common",
+				"location": {"x":99, "y":55}
+			},
+			{
+				"name": "Exhibit 2_16",
+				"popularity": "common",
+				"location": {"x":89, "y":40}
+			}
+		]
+
+	}
+
+]

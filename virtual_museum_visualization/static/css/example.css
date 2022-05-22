@@ -1,0 +1,475 @@
+/*
+ * General Formatting
+ */
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+.main-row {
+    padding: 0;
+}
+
+.sidebar {
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+}
+
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 0;
+}
+
+/*
+ * Loader
+*/
+
+
+#loading-modal {
+    position: absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #347fc3;
+
+}
+
+#loading-modal  .loader-container {
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#loading-modal .bar {
+  position: relative;
+  height: 2px;
+  width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 150px;
+}
+
+#loading-modal .circle {
+  position: absolute;
+  top: -30px;
+  margin-left: -30px;
+  height: 60px;
+  width: 60px;
+  left: 0;
+  background: #fff;
+  border-radius: 30%;
+  -webkit-animation: move 5s infinite;
+}
+
+#loading-modal p {
+  position: absolute;
+  top: -20px;
+  right: -85px;
+  text-transform: uppercase;
+  color: #347fc3;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@-webkit-keyframes move {
+  0% {left: 0;}
+  50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  100 {right: 100%;}
+}
+
+#loading-modal2 {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+#loading-modal2  h1 {
+    text-align: center;
+    margin-top: 30%;
+    color: #fff;
+}
+
+/*
+ * Design
+ */
+
+#viewer {
+    display: none;
+}
+
+#floorplanner {
+    display: none;
+}
+
+#add-items {
+    display: none;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#main-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+}
+
+#username-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+}
+
+/** User buttons and menu */
+.ui-btn{
+    min-width:120px;
+    padding:5px;
+    font-weight:bold;
+}
+.ui-btn>span{
+    height:100%;
+    margin-right:30px;
+    min-width:100px;
+
+}
+
+.ui-btn .vertical-divider{
+    width: 31px;
+    background: #00000014;
+    position: absolute;
+    border-left: 0.5px solid #00000014;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.ui-btn .vertical-divider .glyphicon{
+    top:0;
+    line-height:0;
+}
+
+#object-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 0;
+}
+
+#tour-info-container {
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+div.tour-info {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+}
+
+.tour-info .vertical-divider{
+    background: #48a770;
+}
+
+.tour-info a span.glyphicon{
+    color: #f1eddcde;
+}
+
+.tour-info a{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    font-size: 14px;
+    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+.tour-info a:hover{
+    cursor:default;
+}
+
+
+#floorplanner-camera-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    padding: 0 20px;
+    text-align: right;
+}
+
+#floorplanner-controls {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px 0;
+    padding: 0 20px;
+    width: 100%;
+}
+
+#draw-walls-hint {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.50);
+    color: #ffffff;
+    padding: 5px 10px;
+    z-index: 10;
+    display: none;
+}
+
+#rotate-object-right {
+    -moz-transform: scaleX(-1); /* Firefox */
+    -o-transform: scaleX(-1); /* Opera */
+    -webkit-transform: scaleX(-1); /* Chrome y Safari */
+    transform: scaleX(-1); /* w3org */
+    filter: FlipH; /* Internet Explorer */
+}
+.add-item {
+    cursor: pointer;
+}
+
+.btn-file {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    cursor: inherit;
+    display: block;
+}
+.form-group {
+    text-align: center;
+}
+
+/**
+ * Item Context Menu Inside Elements
+**/
+
+#item-context-menu .horizontal-divider {
+    width: 50px;
+    border-top-color: rgba(0,0,0,.12);
+    margin: auto;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+#item-context-menu .close-wrapper {
+    position: sticky;
+    top: 0;
+    bottom: 45%;
+    height: 40px;
+    width: 30px;
+    background: #0556f163;
+    color: #fafafb91; /** color of arrow **/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+}
+
+#item-context-menu .close-wrapper i.glyphicon {
+    top:0;
+    line-height:0;
+}
+
+#item-context-menu .close-wrapper:hover{
+    background: #0556f1ad;
+    color: #fafafb;
+    cursor:pointer;
+}
+
+#item-context-menu .header{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    position:relative;
+    direction: ltr !important;
+}
+
+#item-context-menu .header .titles{
+    max-width: 300px;
+    white-space: initial;
+    overflow-wrap: break-word;
+}
+
+#item-context-menu .header .qr-container{
+    position: absolute;
+    right: 10px;
+}
+
+#qrcode{
+    box-shadow: 5px 5px 5px;
+}
+
+.move-closer-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    display:none;
+}
+
+p.move-closer {
+    padding: 5px;
+    background: #f6ff99;
+    border: 1px solid #337ab7;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+
+h3.painting-title{
+    font-family: Ubuntu;
+}
+
+h4.painting-author{
+    font-size: 16px;
+    color: #4a4a4a;
+    font-style: italic;
+    font-family: Ubuntu;
+    font-weight: 300;
+}
+
+p.painting-description{
+    color: #000000;
+    font-family: Ubuntu;
+    font-weight: 300;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: justify;
+    text-align-last: left;
+    white-space: pre-line;
+
+}
+
+
+/*
+ * Start Tour Card
+*/
+div#welcome-modal {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000085;
+    z-index: 100;
+    cursor: auto;
+}
+
+#welcome-modal .welcome-card {
+    padding: 15px;
+    margin-bottom: 150px; background: white; text-align: center;
+    width: 300px;
+    min-height: 100px;
+    border-radius: 5px;
+    border-right: 4px solid cornflowerblue;
+    z-index: 100 !important;
+}
+
+#welcome-modal .welcome-card p {
+    font-family: Ubuntu;
+}
+
+.fullscreen-icon-container {
+    background: #ffffffd9;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    opacity: 85%;
+}
+
+.fullscreen-icon-container span{
+    padding: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background:  #0556f163; /** #1c86c6; **/
+}
+
