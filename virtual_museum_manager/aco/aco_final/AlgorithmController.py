@@ -51,12 +51,13 @@ class AlgorithmController:
         next_state = solver.solve(self.graph, limit=limit)
         self.graph = next_state.graph
         self.algorithm_states.append(next_state)
+        print(f"Done {limit} iterations. Waiting for more feedback")
 
     def manual_pheromone_update(self, edge):
         u, v = edge
         self.graph[u][v]['pheromone'] *= 5
 
-    def pheromone_info(self, edges: list):
+    def pheromone_info(self, edges=None):
         if not edges:
             for u, v in self.graph.edges():
                 print(f'Edge {u}->{v}, pheromone: {self.graph[u][v]["pheromone"]}')

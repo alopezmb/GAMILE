@@ -2,12 +2,11 @@ import itertools
 import bisect
 import random
 import sys
-from copy import copy
 
 from aco_final.solvers import Solution
 
 
-class Ant:
+class AntOriginal:
 
     def __init__(self, alpha=1, beta=3):
         self.alpha = alpha
@@ -145,6 +144,143 @@ class Ant:
         """
         # return [name for name, _ in graph[solution.current].items() if name not in solution]
         return [n for n in graph.nodes() if n not in solution]
+
+    def _choose_destination(self, graph, solution, neighbours_of_current):
+        """
+        Returns next node to visit
+        """
+        current = solution.current
+
+        if len(neighbours_of_current) == 1:
+            return neighbours_of_current[0]
+
+        if solution.previous in neighbours_of_current:
+            # Avoid ant going back and forth between two nodes,
+            # unless there is no other option
+            self._remove_node_safe(neighbours_of_current, solution.previous)
+
+        scores = self._get_scores(graph, current, neighbours_of_current)
+        return self._choose_node(neighbours_of_current, scores)
+
+    def _get_scores(self, graph, current, destinations):
+        """
+        Return scores for the given destinations
+        """
+        scores = []
+        for node in destinations:
+            edge = graph[current][node]
+            score = self._score_edge(edge)
+            scores.append(score)
+        return scores
+
+    def _choose_node(self, choices, scores):
+        """
+        Return one of the choices
+        """
+        total = sum(scores)
+        cumdist = list(itertools.accumulate(scores)) + [total]
+        chosen_node_index = bisect.bisect(cumdist, random.random() * total)
+        return choices[min(chosen_node_index, len(choices) - 1)]
+
+    def _score_edge(self, edge):
+
+        weight = edge['weight']
+        pheromone = edge['pheromone']
+
+        if weight == 0:
+            return sys.float_info.max
+        eta = 1.0 / weight
+        tau = pheromone
+
+        return (tau ** self.alpha) * (eta ** self.beta)
+
+
+class Ant:
+    def __init__(self, alpha=1, beta=3):
+        self.alpha = alpha
+        self.beta = beta
+
+
+
+
+    def construct_tour(self, exhibit_and_door_graph, start_room=1, start_door='D1-1'):
+        """ Construct a tour including all chosen exhibits
+        """
+
+        start_node = start_door
+        solution = Solution(exhibit_and_door_graph, start_node, ant=self)
+        all_unexplored_exhibits = self.get_unexplored_exhibits_in_room(solution, exhibit_and_door_graph)
+
+        while all_unexplored_exhibits:
+            feasible_neighbors = self._get_feasible_neighbors(exhibit_and_door_graph, solution)
+            next_node = self._choose_destination(exhibit_and_door_graph, solution, feasible_neighbors)
+            solution.add_node(next_node)
+            all_unexplored_exhibits = self._remove_node_safe(all_unexplored_exhibits, next_node)
+
+        return solution
+
+    def _get_feasible_neighbors(self, graph, solution):
+
+        available_neighbours = [nb for nb in graph.neighbors(solution.current)]
+        for nb in graph.neighbors(solution.current):
+            is_exhibit = graph.nodes[nb]["type"] == "exhibit"
+            is_door = graph.nodes[nb]["type"] == "door"
+            if is_exhibit and nb not in solution:
+                available_neighbours.append(nb)
+            elif is_door:
+                available_neighbours.append(nb)
+
+        return available_neighbours
+
+
+    def __construct_tour(self, exhibit_and_door_graph, start_room=1, start_door='D1-1'):
+        """
+        Construct a tour including all chosen exhibits
+        """
+        start_node = start_door
+        solution = Solution(exhibit_and_door_graph, start_node, ant=self)
+        all_unexplored_exhibits = self.get_unexplored_exhibits_in_room(solution, exhibit_and_door_graph)
+        while all_unexplored_exhibits:
+            unexplored_neighbor_exhibits = self.get_unexplored_neighbor_exhibits(exhibit_and_door_graph, solution, solution.current)
+            while not unexplored_neighbor_exhibits:
+                neighbor_doors = self.get_neighbor_doors(exhibit_and_door_graph, solution.current)
+                next_door = self._choose_destination(exhibit_and_door_graph, solution, neighbor_doors)
+                solution.add_node(next_door)
+                unexplored_neighbor_exhibits = self.get_unexplored_neighbor_exhibits(exhibit_and_door_graph, solution,
+                                                                                     solution.current)
+            next_exhibit = self._choose_destination(exhibit_and_door_graph, solution, unexplored_neighbor_exhibits)
+            solution.add_node(next_exhibit)
+            all_unexplored_exhibits = self._remove_node_safe(all_unexplored_exhibits, next_exhibit)
+
+        return solution
+
+    def _remove_node_safe(self, node_list, node):
+        try:
+            node_list.remove(node)
+        except ValueError:
+            pass
+        finally:
+            return node_list
+
+    def get_unexplored_exhibits_in_room(self, solution, exhibit_and_door_graph):
+        # node_type is "exhibit" or "door"
+        available_exhibits = []
+
+        for n in exhibit_and_door_graph.nodes():
+            if exhibit_and_door_graph.nodes[n]["type"] == "exhibit" and n not in solution:
+                available_exhibits.append(n)
+
+        return available_exhibits
+
+    def get_neighbor_doors(self, exhibit_and_door_graph, current_node):
+        available_neighbours = [nb for nb in exhibit_and_door_graph.neighbors(current_node)]
+        available_doors = [n for n in available_neighbours if exhibit_and_door_graph.nodes[n]["type"] == "door"]
+        return available_doors
+
+    def get_unexplored_neighbor_exhibits(self, exhibit_and_door_graph, solution, current_node):
+        available_exhibits = [nb for nb in exhibit_and_door_graph.neighbors(current_node)
+                              if (nb not in solution and exhibit_and_door_graph.nodes[nb]["type"] == "exhibit")]
+        return available_exhibits
 
     def _choose_destination(self, graph, solution, neighbours_of_current):
         """
