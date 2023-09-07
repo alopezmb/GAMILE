@@ -2,12 +2,12 @@ import networkx as nx
 import numpy as np
 import re
 from itertools import combinations
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 class MuseumGraphManager:
 
-    def __init__(self, rooms_map, rooms_subset=None, grid_dimensions=[100,70]):
+    def __init__(self, rooms_map, rooms_subset=None, grid_dimensions=[100, 70]):
 
         """
         Graph of Rooms
@@ -26,8 +26,7 @@ class MuseumGraphManager:
     def _prepare_room_map(self, rooms_map, rooms_subset=None):
 
         rooms_prepared = []
-        rooms_filtered = filter(lambda x: x['room_name'] in rooms_subset, rooms_map) \
-            if rooms_subset is not None else rooms_map
+        rooms_filtered = filter(lambda x: x['room_name'] in rooms_subset, rooms_map) if rooms_subset is not None else rooms_map
         for room in rooms_filtered:
 
             # Extract room number
@@ -46,11 +45,12 @@ class MuseumGraphManager:
                 location = (p_start + p_end) / 2.0
 
                 # Create new door dictionary based on mods made to the original.
-                min_room_n, max_room_n = sorted([room_number_origin, door['connects_to_room']])
+                min_room_n, max_room_n = sorted([room_number_origin, int(door['connects_to_room'])])
                 d = {"location": location,
                      "connects_to_room": door['connects_to_room'],
                      "name": "D{a}-{b}".format(a=min_room_n,
-                                               b=max_room_n)
+                                               b=max_room_n),
+                     "type": "door"
                      }
                 # Add prepared door to list of doors that make up the room
                 doors_prepared.append(d)
@@ -60,7 +60,8 @@ class MuseumGraphManager:
                 # Create new exhibit dictionary based on mods made to the original.
                 e = {
                     "location": self._denormalize_coordinate(exhibit['location']),
-                    "name": exhibit['name'].replace("Exhibit ", "E")
+                    "name": exhibit['name'],
+                    "type": "exhibit"
                 }
 
                 # Add prepared exhibit to list of exhibits that make are inside this room
@@ -114,57 +115,49 @@ class MuseumGraphManager:
 
         # create empty graph
         g = nx.Graph()
+        g.graph.update({"n_doors_per_room": {}})
         link_list = []
-
+        nodes_list = []
         for room in self._rooms:  # ([self._rooms[5]] + [self._rooms[12]]):
             # [self._rooms[0]] + [self._rooms[2]] + [self._rooms[4]] + [self._rooms[5]] +  [self._rooms[12]]
             # Make all possible two pair combinations inside the room.
             # (door-door, exhibits-exhibit, door-exhibit)
-
+            room_number_origin = int(re.findall(r"\d+", room['room_name'])[0])
             node_combinations = list(combinations(room['doors'] + room['exhibits'], 2))
-            # print(f' Doors for {room["room_name"]}:')
-            # print(room['doors'])
-            # print()
-            # print(f' Exhibits for {room["room_name"]}:')
-            # print(room['exhibits'])
-            # print('----------------------------------')
-            # print()
-            # print(f'Combinations for {room["room_name"]}:')
+
             for node1, node2 in node_combinations:
+
+                n1_with_info = (node1['name'], {'type': node1['type'], 'room': room_number_origin})
+                n2_with_info = (node2['name'], {'type': node2['type'], 'room': room_number_origin})
+
+                if n1_with_info not in nodes_list:
+                    nodes_list.append(n1_with_info)
+                if n2_with_info not in nodes_list:
+                    nodes_list.append(n2_with_info)
+
                 distance = np.linalg.norm(node1['location'] - node2['location'])
-                n1, n2 = node1['name'], node2['name']
-                link = (n1, n2, {'weight': np.around(distance, 2), 'pheromone': 0})
+                n1_name, n2_name = node1['name'], node2['name']
+                link = (n1_name, n2_name, {'weight': np.around(distance, 2), 'pheromone': 0,
+                                           'room': room_number_origin})
                 # print(link)
                 link_list.append(link)
 
-        # Add links to graph (this automatically creates nodes)
-        g.add_edges_from(link_list)
+            doors_in_room = len(room['doors'])
+            g.graph['n_doors_per_room'][f'{room_number_origin}'] = doors_in_room
 
+        # Add links to graph (this automatically creates nodes)
+        g.add_nodes_from(nodes_list)
+        g.add_edges_from(link_list)
         return g
 
-    def initialise_pheromones(self, graph, start, objectives, rho):
-        cost_nn_heuristic = self._nearest_neighbor_heuristic(graph, start, objectives)
-        initial_pheromone_value = 1.0 / (rho * cost_nn_heuristic)
+
+
+    def initialise_pheromones(self, graph):
+        initial_pheromone_value = 0.9
         for edge in graph.edges():
             u, v = edge
+            graph[u][v]['pheromone'] = initial_pheromone_value
 
-            # door-door links must have phermone
-            if 'D' in u and 'D' in v:
-                graph[u][v]['pheromone'] = initial_pheromone_value
-
-            # exhibit-exhibit links that involve the objectives must have pheromone
-            elif (u in objectives and v in objectives):
-                graph[u][v]['pheromone'] = initial_pheromone_value
-
-                # exhibit-door links that involve objectives must have pheromone
-            elif (u in objectives or v in objectives) and ('D' in u or 'D' in v):
-                graph[u][v]['pheromone'] = initial_pheromone_value
-
-            # links that are initially not relevant
-            # some of these will later be significant as the visitor travels towards interesting exhibits
-            # not located in the initial objectives
-            else:
-                graph[u][v]['pheromone'] = 0
 
     def _create_room_graph(self):
         """
@@ -181,12 +174,24 @@ class MuseumGraphManager:
         for room in self._rooms:
             room_number = re.findall(r"\d+", room['room_name'])[0]
             for node in room['connected_rooms']:
-                link = (int(room_number), node, {'weight': 1})
-                link_list.append(link)
+                if int(room_number) != node:
+                    # Prevent having links between the same room
+                    link = (int(room_number), node, {'weight': 1})
+                    link_list.append(link)
 
         # Add links to graph (automatically creates nodes)
         g.add_edges_from(link_list)
+
+        for room in self._rooms:
+            room_number = int(re.findall(r"\d+", room['room_name'])[0])
+            exhibit_names = [exhibit['name'] for exhibit in room['exhibits']]
+            door_names = [door['name'] for door in room['doors']]
+            g.nodes[room_number]['elements'] = exhibit_names + door_names
         return g
+
+    def get_elements_in_room(self, room_node,):
+        pass
+
 
     def get_shortest_path(self, graph, origin, dest):
         return nx.shortest_path_length(graph, source=origin, target=dest, weight='weight')
@@ -209,7 +214,7 @@ class MuseumGraphManager:
         # print(estimated_cost)
         return estimated_cost
 
-    def plot(self, graph, edge_attribute):
+    def plot(self, graph, edge_attribute='weight'):
         pos = nx.spring_layout(graph)
         plt.figure(figsize=(15, 15))
         attribute_labels = nx.get_edge_attributes(graph, edge_attribute)

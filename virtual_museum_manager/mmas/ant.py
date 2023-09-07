@@ -63,7 +63,9 @@ class Ant:
 
     def _choose_node(self, choices, scores):
         """
-        Return one of the choices
+        Return one of the choices. This function performs a weighted random selection
+        from the choices list based on the provided scores, where higher scores have a higher
+        probability of being chosen.
         """
         total = sum(scores)
         cumdist = list(itertools.accumulate(scores)) + [total]
