@@ -1,3 +1,4 @@
+import time
 from typing import Tuple, Optional
 
 import numpy as np
@@ -6,6 +7,8 @@ from space.Door import Door
 from space.Wall import Wall
 from agents.Exhibit import Exhibit
 from utils.utils import print_trace
+from datetime import timedelta
+import asyncio
 
 
 class Visitor(Agent):
@@ -39,6 +42,8 @@ class Visitor(Agent):
         self.total_path = [self.pos]
         self.visited_exhibits = set()
         self.travel_score = 0
+        self.start_timestamp = 0
+        self.node_times = []
 
     def step(self):
         if not (self.direction_vector == np.array((0, 0))).all():
@@ -96,9 +101,27 @@ class Visitor(Agent):
                             self.edge_path[-1].name in [door.name, door.reciprocal])
 
                 if (len(self.edge_path) == 0) or not is_last_node_this_door:
+                    firs = door.room_origin if int(door.room_origin) < int(door.room_destination) else int(door.room_destination)
+                    sec =  int(door.room_destination) if int(door.room_origin) < int(door.room_destination) else int(door.room_origin)
+                    door.name = f'D{firs}-{sec}'
                     self.edge_path.append(door)
+                    self.node_times.append(time.time())
+
+                    if len(self.edge_path) > 1:
+                        # Interactive ML
+                        e0 = self.edge_path[-2]
+                        e1 = self.edge_path[-1]
+                        # self.model.mmas_controller.manual_pheromone_and_continue_iters((e0.name,e1.name))
+                        # asyncio.run(self.model.mmas_controller.manual_pheromone_and_continue_iters((e0.name,e1.name)))
+                    print("GOT DOOR. Edge path: {0}".format(self.edge_path))
 
                 self.last_step_was_door = (False, None)  # reset
+
+    def add_time(self):
+        t = time.time()
+        delta_t = t - self.start_timestamp
+        return str(timedelta(seconds=delta_t))
+
 
     def move(self, cardinal_direction, axis_rotation_angle, modulus_multiplier=1.0):
         PI = np.pi
@@ -150,6 +173,14 @@ class Visitor(Agent):
             if original_length < new_length:
                 self.travel_score += 100
                 self.edge_path.append(visited_painting)
+                self.node_times.append(time.time())
+                # Interactive ML
+                e0 = self.edge_path[-2]
+                e1 = self.edge_path[-1]
+                print("EDGES to add pheromone to: ", e0.name, e1.name)
+                # self.model.mmas_controller.manual_pheromone_and_continue_iters((e0.name, e1.name))
+
+            print("EDGES: ", self.edge_path)
 
         else:
             raise Exception("Should have found a painting")

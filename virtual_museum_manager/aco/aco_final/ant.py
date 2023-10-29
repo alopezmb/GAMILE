@@ -3,7 +3,7 @@ import bisect
 import random
 import sys
 
-from aco_final.solvers import Solution
+from aco.aco_final.solvers import Solution
 
 
 class AntOriginal:

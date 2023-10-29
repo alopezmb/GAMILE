@@ -5,8 +5,12 @@ A Mesa implementation of Craig Reynolds's Boids flocker model.
 Uses numpy arrays to represent vectors.
 """
 import itertools
+import os
 
 import random
+import time
+from datetime import timedelta
+
 import numpy as np
 from copy import deepcopy
 
@@ -16,10 +20,11 @@ from mesa.time import RandomActivation
 
 from agents.Exhibit import Exhibit
 from agents.Visitor import Visitor
+from space.Door import Door
 from space.Room import Room
 
-from mmas.AlgorithmController import AlgorithmController
-from mmas.MuseumGraphManager import MuseumGraphManager
+from aco.aco_final.AlgorithmController import AlgorithmController
+from aco.aco_final.MuseumGraphManager import MuseumGraphManager
 from utils.utils import print_trace
 
 
@@ -68,7 +73,7 @@ class Museum(Model):
         # self.choose_exhibits_and_place_all()
 
         # self.choose_exhibits_and_place_agents(["room_13"])
-        # self.mmas_controller = self.config_mmas()
+        self.mmas_controller = self.config_mmas()
         # self.initial_iterations = 10
         # self.next_iterations = 5
         # record_solution = self.mmas_controller.compute_initial_iterations(limit=10)
@@ -91,6 +96,13 @@ class Museum(Model):
 
         visitor = Visitor(self.next_id(), self, pos)
         self.visitor = visitor
+        self.visitor.start_timestamp = time.time()
+        self.visitor.node_times = [self.visitor.start_timestamp]
+
+        start_door = Door(start_point=(2, 8), end_point=(5, 10), room_origin=1, room_destination=1)
+        d_name = start_door.name.replace("_", "-")
+        start_door.name = f'D{d_name}'
+        self.visitor.edge_path = [start_door]
 
         # Locate visitor in a room (room_number,idx) and assign room object to visitor
         self.visitor.room = self.locate_visitor()
@@ -200,20 +212,71 @@ class Museum(Model):
 
                 self.chosen_exhibits.append({"room": room_object, "exhibits": exs})
 
-    def config_mmas(self):
+    def config_mmas(self, initial_iters=10):
         # Parameters
-        gm = MuseumGraphManager(self.rooms_json, self.grid_dimensions)
+        print("*************************")
+        print("Configuring MMAS iML...")
+        print("*************************")
+
+        if os.path.isfile("../virtual_museum_iml.pickle"):
+            print("Found a saved graph")
+            g = None
+        else:
+            print("Creating new graph for the first time...")
+            gm = MuseumGraphManager(self.rooms_json)
+            g = gm.door_graph
+            gm.initialise_pheromones(g)
 
         params = {
-            'graph_manager': gm,
+            'graph': g,
             'alpha': 1,
             'beta': 1,
             'rho': 0.02,
             'pts': True,
             'pts_factor': 1,
-            'num_ants': len(gm.door_graph.nodes()),
-            'start': 'D1-1',
-            'objectives': ['E2_6', 'E1_6', 'E3_13', 'E1_13']
+            'num_ants': len(g.nodes()),
+            'start_node': 'D1-1',
+            'start_room': 1
         }
 
-        return AlgorithmController(**params)
+        ac = AlgorithmController(**params)
+        # ac.compute_initial_iterations(limit=initial_iters)
+        return ac
+
+    def get_tour_data(self):
+        print("*******************************")
+        print("      Retrieving Tour Data     ")
+        print("*******************************")
+
+        graph = self.mmas_controller.graph
+        clean_edge_data = self._create_tuples(self.visitor.edge_path)
+        clean_time_data = self._create_tuples(self.visitor.node_times)
+        tour_data = []
+        w = 0
+        for idx, edge in enumerate(clean_edge_data):
+            u, v = edge
+            u_str = u.name
+            v_str = v.name
+            edge_data = graph[u_str][v_str]
+            edge_t = clean_time_data[idx]
+            t0, t1 = edge_t
+            t0_good = str(timedelta(seconds=(t0 - self.visitor.start_timestamp)))
+            t1_good = str(timedelta(seconds=(t1 - self.visitor.start_timestamp)))
+            edge_weight = edge_data['weight']
+            w += edge_data['weight']
+            data_item = {"origin": u_str, "destination": v_str, "origin_timestamp": t0_good,
+                         "destination_timestamp": t1_good, "edge_weight": edge_weight}
+            tour_data.append(data_item)
+        return tour_data
+
+    def _create_tuples(self, lst):
+        # Check if the list has an odd number of elements
+        if len(lst) % 2 != 0:
+            lst = lst[:-1]
+
+        # Create tuples by iterating through the list
+        result = []
+        for i in range(0, len(lst), 2):
+            result.append((lst[i], lst[i + 1]))
+
+        return result

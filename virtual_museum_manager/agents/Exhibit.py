@@ -37,7 +37,10 @@ class Exhibit(Agent):
         return (self.name == other.name) and np.array_equal(self.pos, other.pos)
 
     def __str__(self):
-        return self.name
+        return  f'{self.name}'
+
+    def __repr__(self):
+        return f'{self.name}'
 
     def step(self):
         """

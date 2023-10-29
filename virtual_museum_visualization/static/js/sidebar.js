@@ -31,9 +31,13 @@ function makeNavigatableLinks(){
     links = $('nav').find('a');
     links.each(function(index, link){
         var route = "/" + $(link).attr('id');
-        $(link).on('click',function(){
+        var isNavigatable = $(link).attr('class') !== 'non-navigatable'
+        if (isNavigatable){
+             $(link).on('click',function(){
             navigate(route)
          });
+        }
+
     });
 }
 

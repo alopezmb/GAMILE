@@ -418,7 +418,7 @@ p.painting-description{
 /*
  * Start Tour Card
 */
-div#welcome-modal {
+div.welcome-modal {
     width: 100%;
     height:100%;
     position: absolute;
@@ -435,7 +435,7 @@ div#welcome-modal {
     cursor: auto;
 }
 
-#welcome-modal .welcome-card {
+.welcome-modal .welcome-card {
     padding: 15px;
     margin-bottom: 150px; background: white; text-align: center;
     width: 300px;
@@ -445,7 +445,7 @@ div#welcome-modal {
     z-index: 100 !important;
 }
 
-#welcome-modal .welcome-card p {
+.welcome-modal .welcome-card p {
     font-family: Ubuntu;
 }
 

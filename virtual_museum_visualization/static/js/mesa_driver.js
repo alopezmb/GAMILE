@@ -263,6 +263,23 @@ export function MesaController(blueprint3d){
         });
     }
 
+    const finishTour = function(){
+        try {
+            const username = $('#username').text()
+            const payload = {
+                "instruction_type": "finish_tour",
+                "data":{"username": username}
+            };
+            $('#finish-tour-modal').show();
+            postData(payload)
+            $('#finish-tour-modal').hide();
+
+            } catch(err) {
+                console.log(err);
+            }
+    }
+
+
 
     /**  Initialiser Function */
     const init = function(){
@@ -278,11 +295,19 @@ export function MesaController(blueprint3d){
        
         setTimeout(() => startOnZPosition(initialZ) ,4000);
         $('#start-tour').click(() => {
+            try {
+                 const payload = {"instruction_type": "start_tour",
+                     "data":{}};
+                 postData(payload)
+            } catch(err) {
+                console.log(err);
+            }
             setInterval(() => updateTime(), 1000);
             $('#welcome-modal').hide();
             // allow movement
             enableControls = true;
         });
+        $('#museum-finish-tour').click(() => finishTour());
 
     }
 

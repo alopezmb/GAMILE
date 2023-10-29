@@ -23,7 +23,7 @@
 
                 <div id="username-container">
                     <a class="btn btn-default btn-sm ui-btn" id="user">
-                        <span>{{user.username}}</span>
+                        <span id="username">{{user.username}}</span>
                         <div class="vertical-divider">
                              <span class="glyphicon glyphicon-user"></span>
                         </div>
@@ -120,6 +120,12 @@
                           </a>
                       </li>
                       <li>
+                          <a id="museum-finish-tour" class="non-navigatable">
+                              <span class="glyphicon glyphicon-flag"></span>
+                              <span>Finish Visit</span>
+                          </a>
+                      </li>
+                      <li>
                           <a id="logout">
                               <span class="glyphicon glyphicon-off"></span>
                               <span>Logout</span>
@@ -131,10 +137,16 @@
             <!-- End Side Navbar-->
 
             <!-- Welcome Message-->
-            <div id="welcome-modal">
+            <div id="welcome-modal" class="welcome-modal">
                 <div class="welcome-card">
                     <p>Welcome to the virtual museum!</p>
                     <button class="btn btn-sm bg-primary" id="start-tour">Start Tour</button>
+                </div>
+            </div>
+
+            <div id="finish-tour-modal" class="welcome-modal" style="display:none">
+                <div class="welcome-card">
+                    <p>Ending Visit. Please wait while data is saved ...</p>
                 </div>
             </div>
 

@@ -329,16 +329,16 @@ class MuseumServer(tornado.web.Application):
             visualization_state.append(element_state)
         return visualization_state
 
-    def launch(self, port=None, open_browser=True, autoreload=False):
+    async def launch(self, port=None, open_browser=True, autoreload=False):
         self._configure_api_handlers()
-        self._launch_modular_server(port=port, open_browser=open_browser, autoreload=autoreload)
+        await self._launch_modular_server(port=port, open_browser=open_browser, autoreload=autoreload)
 
     def _configure_api_handlers(self):
 
         api_handlers_with_model = map(lambda api_handler: api_handler + ({'mesa_manager': self},), api_handlers)
         self.add_handlers(r".*", api_handlers_with_model)
 
-    def _launch_modular_server(self, port=None, open_browser=True, autoreload=False):
+    async def _launch_modular_server(self, port=None, open_browser=True, autoreload=False):
         """ Run the app. """
         if port is not None:
             self.port = port
@@ -349,4 +349,5 @@ class MuseumServer(tornado.web.Application):
             webbrowser.open(url)
         if autoreload:
             tornado.autoreload.start()
-        tornado.ioloop.IOLoop.current().start()
+        # tornado.ioloop.IOLoop.current().start()
+        await asyncio.Event().wait()

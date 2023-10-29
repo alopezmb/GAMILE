@@ -31,7 +31,10 @@ class Door:
         self.door_line = self._create_door_line()
 
     def __str__(self):
-        return str(self.name)
+        return f'self.name'
+
+    def __repr__(self):
+        return f'{self.name}'
 
     def _create_door_line(self):
         x1, y1 = self.start_point
