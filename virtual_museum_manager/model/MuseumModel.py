@@ -73,7 +73,9 @@ class Museum(Model):
         # self.choose_exhibits_and_place_all()
 
         # self.choose_exhibits_and_place_agents(["room_13"])
-        self.mmas_controller = self.config_mmas()
+        self.graph_manager = MuseumGraphManager(self.rooms_json)
+
+        # self.config_mmas()
         # self.initial_iterations = 10
         # self.next_iterations = 5
         # record_solution = self.mmas_controller.compute_initial_iterations(limit=10)
@@ -248,7 +250,7 @@ class Museum(Model):
         print("      Retrieving Tour Data     ")
         print("*******************************")
 
-        graph = self.mmas_controller.graph
+        graph = self.graph_manager.door_graph
         clean_edge_data = self._create_tuples(self.visitor.edge_path)
         clean_time_data = self._create_tuples(self.visitor.node_times)
         tour_data = []
