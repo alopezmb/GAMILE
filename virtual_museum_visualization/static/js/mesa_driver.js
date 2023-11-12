@@ -265,14 +265,16 @@ export function MesaController(blueprint3d){
 
     const finishTour = function(){
         try {
-            const username = $('#username').text()
+            const username = $('#username').text();
             const payload = {
                 "instruction_type": "finish_tour",
                 "data":{"username": username}
             };
             $('#finish-tour-modal').show();
-            postData(payload)
-            $('#finish-tour-modal').hide();
+            postData(payload);
+            setTimeout(() => {
+                location.href = 'museum-reset-tour'},
+                3000);
 
             } catch(err) {
                 console.log(err);

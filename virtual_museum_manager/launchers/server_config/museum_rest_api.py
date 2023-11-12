@@ -42,11 +42,11 @@ class MuseumAPI(RequestHandler, ABC):
     async def post(self):
         # Retrieve movement instructions
         instructions = json_decode(self.request.body)
-        print("************************************")
-        print("*       RECEIVED INSTRUCTIONS:     *")
-        print(instructions)
-        print("***********************************+")
-        print("\n")
+        # print("************************************")
+        # print("*       RECEIVED INSTRUCTIONS:     *")
+        # print(instructions)
+        # print("***********************************+")
+        # print("\n")
 
         # Execute instructions appropriately
         await self.execute_instructions(instructions)
@@ -108,28 +108,12 @@ class MuseumAPI(RequestHandler, ABC):
         self.write("Position successfully set!")
 
     async def reset_simulation(self):
-        # if len(self.model.visitor.edge_path) > 4:
-        #    # First store our important stuff
-        #    self.model.mmas_controller.save_graph()
-        #    self.model.dump_results()
-        #    self.model.mmas_controller.print_best_sol()
-
         self.mesa_manager.reset_model()
         self.mesa_manager.render_model()
         self.model.step()
 
     def start_tour(self, instruction_data):
         pass
-        # self.username = instruction_data.get('username')
-        # Users.find_one({'username': username})
-        # print("USER FOUND:")
-        # print(user)
-        # if user:
-        #    Users.update_one({"_id": user["_id"]},
-        #                     {"$set": {"visits": ['myvisit']}})
-        # user = Users.find_one({'username': username})
-        # print("UPDATED USER:")
-        # print(user)
 
     def finish_tour(self, instruction_data):
         username = instruction_data.get('username')
@@ -139,6 +123,9 @@ class MuseumAPI(RequestHandler, ABC):
         print(f'Saving tour data for user: {user}')
         if user:
             user_tour_data = self.model.get_tour_data()
+            if len(user_tour_data) < 2:
+                print("No tour data to save")
+                return
             Users.update_one({"_id": user["_id"]},
                              {"$push": {"visits": user_tour_data}})
             print("User Tour Data saved in database:")

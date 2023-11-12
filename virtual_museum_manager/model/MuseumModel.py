@@ -272,13 +272,11 @@ class Museum(Model):
         return tour_data
 
     def _create_tuples(self, lst):
-        # Check if the list has an odd number of elements
-        if len(lst) % 2 != 0:
-            lst = lst[:-1]
 
         # Create tuples by iterating through the list
         result = []
-        for i in range(0, len(lst), 2):
-            result.append((lst[i], lst[i + 1]))
+        for i in range(0, len(lst) + 1):
+            if i + 1 < len(lst):
+                result.append((lst[i], lst[i + 1]))
 
         return result
