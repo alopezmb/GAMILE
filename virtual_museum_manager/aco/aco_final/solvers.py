@@ -110,6 +110,8 @@ class Solver:
                        limit + state.current_iteration) if limit is not None else itertools.count()
 
         for i in looper:
+            if i % 20 == 0:
+                print("Iteration: ", i)
 
             solutions = self._construct_solutions(state, start_room, start_node)
             solutions, ants = self._order_solutions_ants(solutions, ants)
@@ -146,7 +148,7 @@ class Solver:
             self._evaporate_and_increase_pheromone_trails(state, edge, best_solution)
 
             # Update pheromone trail lower and upper bounds
-            self._adjust_pheromone_trail_limits(state, edge, best_solution)
+            # self._adjust_pheromone_trail_limits(state, edge, best_solution)
 
             # Pheromone trail smoothing
             # self._pheromone_trail_smoothing(state,edge)
@@ -169,7 +171,7 @@ class Solver:
         else:
             return 'iteration_best'
 
-    def _best_solution_type_choice(self, state):
+    def __best_solution_type_choice(self, state):
         # Choose between global best and iteration best
         choices = {'iteration_best': state.solutions[0], 'global_best': state.record}
         t = state.current_iteration
@@ -177,7 +179,7 @@ class Solver:
         # choice_made = print(f'{type} used at iteration {t}')
         return choices[type]
 
-    def __best_solution_type_choice(self, state):
+    def _best_solution_type_choice(self, state):
 
         # Choose between global best and iteration best
 
@@ -236,7 +238,7 @@ class Solver:
             if updated_pheromone_trail < lower_bound:
                 updated_pheromone_trail = lower_bound
 
-            elif updated_pheromone_trail > upper_bound:
+            elif updated_pheromone_trail > upper_bound and updated_pheromone_trail / upper_bound < 100:
                 updated_pheromone_trail = upper_bound
 
             else:

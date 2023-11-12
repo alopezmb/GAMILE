@@ -148,6 +148,9 @@ class MuseumGraphManager:
         # Add links to graph (this automatically creates nodes)
         g.add_nodes_from(nodes_list)
         g.add_edges_from(link_list)
+
+        self_loops = [(u, v) for u, v in g.edges() if u == v]
+        g.remove_edges_from(self_loops)
         return g
 
 

@@ -1,5 +1,6 @@
 import pickle
 from copy import deepcopy
+import pandas as pd
 
 from aco.aco_final.ant import Colony
 from aco.aco_final.solvers import Solver
@@ -20,17 +21,12 @@ class AlgorithmController:
         self.algorithm_states = []
         self.start_room = start_room
         self.start_node = start_node
+        self.graph_original_state = graph.copy() if graph is not None else None
 
         if graph is None:
             self.load_graph()
         else:
             self.graph = graph
-
-
-    def _config_graph(self, graph_manager):
-        g = graph_manager.door_graph
-        graph_manager.initialise_pheromones(g)
-        return g
 
     def compute_initial_iterations(self, limit=200):
 
@@ -59,23 +55,38 @@ class AlgorithmController:
         self.algorithm_states.append(next_state)
         print(f"Done {limit} iterations. Waiting for more feedback")
 
-    def manual_pheromone_update(self, edge):
+    def manual_pheromone_update(self, edge, multiplier=250):
         print("Manual pheromone update of edge:", edge)
         u, v = edge
-        self.graph[u][v]['pheromone'] *= 250
+        pheromome = self.graph[u][v]['pheromone']
+        new_pheromone = pheromome * multiplier
+        self.graph[u][v]['pheromone'] = new_pheromone
+        # if new_pheromone >= 1:
+        #    self.graph[u][v]['pheromone'] = 0.9999999999
 
-    def manual_pheromone_and_continue_iters(self, edge, limit=15):
-        self.manual_pheromone_update(edge)
+    def manual_pheromone_and_continue_iters(self, edge, multiplier=250, limit=15):
+        self.manual_pheromone_update(edge, multiplier=multiplier)
         self.compute_next_iterations(limit=limit)
 
-    def pheromone_info(self, edges=None):
-        if not edges:
-            for u, v in self.graph.edges():
-                print(f'Edge {u}->{v}, pheromone: {self.graph[u][v]["pheromone"]}')
-        else:
-            for edge in edges:
-                u, v = edge
-                print(f'Edge {u}->{v}, pheromone: {self.graph[u][v]["pheromone"]}')
+    def pheromone_info(self, edges=None, use_dataframe=False):
+        edge_data = []
+        if edges is None:
+            edges = self.graph.edges()
+
+        for edge in edges:
+            u, v = edge
+            if not use_dataframe:
+                print(f'Edge {u}->{v}, pheromone: {self.graph[u][v]["pheromone"]}, '
+                      f'weight: {self.graph[u][v]["weight"]}')
+            d = {"nodeA": u,
+                 "nodeB": v,
+                 "pheromone": self.graph[u][v]["pheromone"],
+                 "weight": self.graph[u][v]["weight"]
+                 }
+            edge_data.append(d)
+
+        if use_dataframe:
+            return pd.DataFrame.from_dict(edge_data)
 
     def save_graph(self):
         print("*******************************")
@@ -97,4 +108,8 @@ class AlgorithmController:
         best_path = state.record.path
         print(best_cost)
         print(best_path)
+
+    def reset_algorithm(self):
+        self.graph = self.graph_original_state.copy()
+        print("Algorithm has been reset")
 

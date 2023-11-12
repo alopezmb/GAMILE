@@ -24,18 +24,22 @@ class AntOriginal:
         door = start_node
         visited_rooms = {room}
         while all_unexplored_exhibits:
-            door, room, all_unexplored_exhibits, visited_rooms = self._construct_exhibit_tour_in_room(solution, room, door,
+            door, room, all_unexplored_exhibits, visited_rooms = self._construct_exhibit_tour_in_room(solution, room,
+                                                                                                      door,
                                                                                                       exhibit_and_door_graph,
-                                                                                                      all_unexplored_exhibits, visited_rooms)
+                                                                                                      all_unexplored_exhibits,
+                                                                                                      visited_rooms)
 
         return solution
 
-    def _construct_exhibit_tour_in_room(self, solution, current_room, starting_node_in_current_room, exhibit_and_door_graph,
+    def _construct_exhibit_tour_in_room(self, solution, current_room, starting_node_in_current_room,
+                                        exhibit_and_door_graph,
                                         all_unexplored_exhibits, visited_rooms):
 
         # solution = Solution(room_graph, starting_node_in_current_room, ant=self)
         unexplored_exhibit_nodes_in_room = self.get_unexplored_exhibits_in_room(solution, exhibit_and_door_graph,
-                                                                                starting_node_in_current_room, current_room)
+                                                                                starting_node_in_current_room,
+                                                                                current_room)
         last_exhibit = None
         while unexplored_exhibit_nodes_in_room:
             next_exhibit = self._choose_destination(exhibit_and_door_graph, solution, unexplored_exhibit_nodes_in_room)
@@ -52,7 +56,8 @@ class AntOriginal:
             return current_room, starting_node_in_current_room, all_unexplored_exhibits, visited_rooms
 
         last_exhibit = last_exhibit if last_exhibit is not None else starting_node_in_current_room
-        unexplored_door_nodes_in_room = self._get_unexplored_door_nodes(solution, exhibit_and_door_graph, last_exhibit, current_room)
+        unexplored_door_nodes_in_room = self._get_unexplored_door_nodes(solution, exhibit_and_door_graph, last_exhibit,
+                                                                        current_room)
 
         next_door = self._choose_destination(exhibit_and_door_graph, solution, unexplored_door_nodes_in_room)
         next_room = self.get_next_room(solution, exhibit_and_door_graph, next_door, current_room, visited_rooms)
@@ -76,7 +81,8 @@ class AntOriginal:
         Only next room valid if it has not been explored yet or if there is no other way to exit the current
         room other than repeating a room.
         """
-        neighbor_exhibits_of_door = self.get_unexplored_neighbor_exhibits_not_in_room(solution, exhibit_and_door_graph, next_door, current_room)
+        neighbor_exhibits_of_door = self.get_unexplored_neighbor_exhibits_not_in_room(solution, exhibit_and_door_graph,
+                                                                                      next_door, current_room)
         new_room = current_room
 
         if len(neighbor_exhibits_of_door) == 0:
@@ -96,7 +102,8 @@ class AntOriginal:
                 break
         return new_room
 
-    def get_unexplored_exhibits_in_room(self, solution, exhibit_and_door_graph, starting_node_in_current_room, current_room,
+    def get_unexplored_exhibits_in_room(self, solution, exhibit_and_door_graph, starting_node_in_current_room,
+                                        current_room,
                                         all_rooms=False):
         # node_type is "exhibit" or "door"
         available_exhibits = []
@@ -110,10 +117,10 @@ class AntOriginal:
                                   if (nb not in solution and exhibit_and_door_graph.nodes[nb]["type"] == "exhibit"
                                       and exhibit_and_door_graph.nodes[nb]["room"] == current_room)]
 
-
         return available_exhibits
 
-    def get_unexplored_neighbor_exhibits_not_in_room(self, solution, exhibit_and_door_graph, starting_node_in_current_room, current_room):
+    def get_unexplored_neighbor_exhibits_not_in_room(self, solution, exhibit_and_door_graph,
+                                                     starting_node_in_current_room, current_room):
         available_exhibits = [nb for nb in exhibit_and_door_graph.neighbors(starting_node_in_current_room)
                               if (nb not in solution and exhibit_and_door_graph.nodes[nb]["type"] == "exhibit"
                                   and exhibit_and_door_graph.nodes[nb]["room"] != current_room)]
@@ -130,13 +137,11 @@ class AntOriginal:
             # already been visited, this leads to a block. So
             # in these cases we have to open again all search possibilities
             # to try to find the room that we missed
-            available_neighbours  = [nb for nb in exhibit_and_door_graph.neighbors(starting_node_in_current_room)]
+            available_neighbours = [nb for nb in exhibit_and_door_graph.neighbors(starting_node_in_current_room)]
 
         available_doors = [n for n in available_neighbours if exhibit_and_door_graph.nodes[n]["type"] == "door"]
 
-
         return available_doors
-
 
     def _get_unexplored_nodes(self, graph, solution):
         """
@@ -200,16 +205,13 @@ class Ant:
         self.alpha = alpha
         self.beta = beta
 
-
-
-
     def construct_tour(self, exhibit_and_door_graph, start_room=1, start_door='D1-1'):
         """ Construct a tour including all chosen exhibits
         """
 
         start_node = start_door
         solution = Solution(exhibit_and_door_graph, start_node, ant=self)
-        all_unexplored_exhibits = self.get_unexplored_exhibits_in_room(solution, exhibit_and_door_graph)
+        all_unexplored_exhibits = self.get_unexplored_exhibits(solution, exhibit_and_door_graph)
 
         while all_unexplored_exhibits:
             feasible_neighbors = self._get_feasible_neighbors(exhibit_and_door_graph, solution)
@@ -221,7 +223,7 @@ class Ant:
 
     def _get_feasible_neighbors(self, graph, solution):
 
-        available_neighbours = [nb for nb in graph.neighbors(solution.current)]
+        available_neighbours = []
         for nb in graph.neighbors(solution.current):
             is_exhibit = graph.nodes[nb]["type"] == "exhibit"
             is_door = graph.nodes[nb]["type"] == "door"
@@ -232,16 +234,16 @@ class Ant:
 
         return available_neighbours
 
-
     def __construct_tour(self, exhibit_and_door_graph, start_room=1, start_door='D1-1'):
         """
         Construct a tour including all chosen exhibits
         """
         start_node = start_door
         solution = Solution(exhibit_and_door_graph, start_node, ant=self)
-        all_unexplored_exhibits = self.get_unexplored_exhibits_in_room(solution, exhibit_and_door_graph)
+        all_unexplored_exhibits = self.get_unexplored_exhibits(solution, exhibit_and_door_graph)
         while all_unexplored_exhibits:
-            unexplored_neighbor_exhibits = self.get_unexplored_neighbor_exhibits(exhibit_and_door_graph, solution, solution.current)
+            unexplored_neighbor_exhibits = self.get_unexplored_neighbor_exhibits(exhibit_and_door_graph, solution,
+                                                                                 solution.current)
             while not unexplored_neighbor_exhibits:
                 neighbor_doors = self.get_neighbor_doors(exhibit_and_door_graph, solution.current)
                 next_door = self._choose_destination(exhibit_and_door_graph, solution, neighbor_doors)
@@ -262,7 +264,7 @@ class Ant:
         finally:
             return node_list
 
-    def get_unexplored_exhibits_in_room(self, solution, exhibit_and_door_graph):
+    def get_unexplored_exhibits(self, solution, exhibit_and_door_graph):
         # node_type is "exhibit" or "door"
         available_exhibits = []
 
