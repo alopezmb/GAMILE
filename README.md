@@ -19,10 +19,13 @@
 
 ### Running the Scenario
 
+**Note**: the first time the project is executed you need to execute the following script first:
+**setup_docker_compose.sh** (located in the root directory)
+
 Since the project has been dockerized, running it is as simple as launching the docker-compose file in the root directory and opening a web browser to start the virtual museum tour! In other words, do the following:
 
 1. ```bash
-   sudo docker-compose up --build
+   sudo docker-compose up
    ```
 
 2. Once the docker containers are up and running, open your favourite browser and go to the following address: http://localhost:1234/

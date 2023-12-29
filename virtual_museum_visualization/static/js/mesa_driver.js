@@ -5,7 +5,7 @@ export function MesaController(blueprint3d){
     var three = blueprint3d.three;
     var orbitControls = three.controls;
     var initialZ = 2300;
-    var panSpeed = 100;
+    var panSpeed = 200; // original set at 100
     var panUnit = 0; // Modulus of minimum movement vector
     var disableMESA = false;
     var endpointMESA = "http://localhost:1331"

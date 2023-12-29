@@ -105,7 +105,6 @@ import tornado.websocket
 import tornado.escape
 import tornado.gen
 import webbrowser
-import threading
 
 from mesa.visualization.UserParam import UserSettableParameter
 
