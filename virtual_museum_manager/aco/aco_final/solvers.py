@@ -141,14 +141,15 @@ class Solver:
 
     def _update_pheromones(self, state):
 
-        best_solution = self._best_solution_type_choice(state)
+        best_solution = state.best  # iteration best # self._best_solution_type_choice(state)
+        self._update_pheromone_bounds(state, best_solution)
 
         for edge in state.graph.edges:
             # Evaporate and increase pheromone trails
             self._evaporate_and_increase_pheromone_trails(state, edge, best_solution)
 
             # Update pheromone trail lower and upper bounds
-            # self._adjust_pheromone_trail_limits(state, edge, best_solution)
+            self._adjust_pheromone_trail_limits(state, edge)
 
             # Pheromone trail smoothing
             # self._pheromone_trail_smoothing(state,edge)
@@ -218,36 +219,23 @@ class Solver:
 
         state.graph.edges[edge]['pheromone'] = (1 - self.rho) * old_pheromone + pheromone_increase
 
-    def _adjust_pheromone_trail_limits(self, state, edge, best_solution):
+    def _adjust_pheromone_trail_limits(self, state, edge):
 
         # Adjust pheromone trails to limits
         updated_pheromone_trail = state.graph.edges[edge]['pheromone']
 
         if updated_pheromone_trail != 0:
 
-            best_length = best_solution.cost
-            n = len(state.graph.nodes())
+            if updated_pheromone_trail < state.current_lower_bound:
+                updated_pheromone_trail = state.current_lower_bound
 
-            upper_bound = 1.0 / ((1 - self.rho) * best_length)
-            lower_bound = (upper_bound * (1.0 - (self.pBest ** (1.0 / n)))) / (
-                        ((n / 2.0) - 1) * (self.pBest ** (1.0 / n)))
-
-            # print(f' Upper bound: {upper_bound}')
-            # print(f' Lower bound: {lower_bound}')
-
-            if updated_pheromone_trail < lower_bound:
-                updated_pheromone_trail = lower_bound
-
-            elif updated_pheromone_trail > upper_bound and updated_pheromone_trail / upper_bound < 100:
-                updated_pheromone_trail = upper_bound
+            elif updated_pheromone_trail > state.current_upper_bound:  # updated_pheromone_trail / upper_bound < 100:
+                updated_pheromone_trail = state.current_upper_bound
 
             else:
                 updated_pheromone_trail = updated_pheromone_trail
 
             state.graph.edges[edge]['pheromone'] = updated_pheromone_trail
-
-            state.current_upper_bound = upper_bound
-            state.current_lower_bound = lower_bound
 
     def _pheromone_trail_smoothing(self, state, edge):
 
@@ -279,3 +267,13 @@ class Solver:
             # pheromone trail reinitialization
             # tengo que explorarlo, o cojo la formula (un poco movida) o compruebo si no mejora la
             # busqueda en x iteraciones, y con ese criterio sencillo digo que reinicio los trails
+
+    def _update_pheromone_bounds(self, state, best_solution):
+        best_length = best_solution.cost
+        n = len(state.graph.nodes())
+
+        upper_bound = 1.0 / ((1 - self.rho) * best_length)
+        lower_bound = (upper_bound * (1.0 - (self.pBest ** (1.0 / n)))) / (
+                ((n / 2.0) - 1) * (self.pBest ** (1.0 / n)))
+        state.current_upper_bound = upper_bound
+        state.current_lower_bound = lower_bound

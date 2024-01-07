@@ -2,13 +2,14 @@ import pickle
 from copy import deepcopy
 import pandas as pd
 
+from aco.aco_final.MuseumGraphManager import MuseumGraphManager
 from aco.aco_final.ant import Colony
 from aco.aco_final.solvers import Solver
 
 
 class AlgorithmController:
 
-    def __init__(self, graph=None, alpha=1, beta=3,
+    def __init__(self, raw_museum_floorplan=None, alpha=1, beta=3,
                  rho=0.02, pts=False, pts_factor=0.5, num_ants=100, start_room=1, start_node='D1-1'):
 
         self.alpha = alpha
@@ -17,16 +18,22 @@ class AlgorithmController:
         self.pts = pts
         self.pts_factor = pts_factor
         self.num_ants = num_ants
-        self.graph = None
+        self.graph = self._initialise_graph(raw_museum_floorplan)
         self.algorithm_states = []
         self.start_room = start_room
         self.start_node = start_node
-        self.graph_original_state = graph.copy() if graph is not None else None
+        self.graph_original_state = None # graph.copy() if graph is not None else None
 
-        if graph is None:
-            self.load_graph()
-        else:
-            self.graph = graph
+        # if graph is None:
+        #    self.load_graph()
+        # else:
+        #    self.graph = graph
+
+    def _initialise_graph(self, raw_museum_floorplan):
+        graph_manager = MuseumGraphManager(raw_museum_floorplan)
+        graph = graph_manager.door_graph
+        graph_manager.initialise_pheromones(graph)
+        return graph
 
     def compute_initial_iterations(self, limit=200):
 
@@ -61,27 +68,29 @@ class AlgorithmController:
         pheromome = self.graph[u][v]['pheromone']
         new_pheromone = pheromome * multiplier
         self.graph[u][v]['pheromone'] = new_pheromone
-        # if new_pheromone >= 1:
-        #    self.graph[u][v]['pheromone'] = 0.9999999999
+        if new_pheromone >= 1:
+            self.graph[u][v]['pheromone'] = 0.9999999999
 
     def manual_pheromone_and_continue_iters(self, edge, multiplier=250, limit=15):
         self.manual_pheromone_update(edge, multiplier=multiplier)
         self.compute_next_iterations(limit=limit)
 
-    def pheromone_info(self, edges=None, use_dataframe=False):
+    def pheromone_info(self, edges=None, state_idx=-1, use_dataframe=False):
         edge_data = []
+        state = self.algorithm_states[state_idx]
+        graph = state.graph
         if edges is None:
-            edges = self.graph.edges()
+            edges = graph.edges()
 
         for edge in edges:
             u, v = edge
             if not use_dataframe:
-                print(f'Edge {u}->{v}, pheromone: {self.graph[u][v]["pheromone"]}, '
-                      f'weight: {self.graph[u][v]["weight"]}')
+                print(f'Edge {u}->{v}, pheromone: {graph[u][v]["pheromone"]}, '
+                      f'weight: {graph[u][v]["weight"]}')
             d = {"nodeA": u,
                  "nodeB": v,
-                 "pheromone": self.graph[u][v]["pheromone"],
-                 "weight": self.graph[u][v]["weight"]
+                 "pheromone": graph[u][v]["pheromone"],
+                 "weight": graph[u][v]["weight"]
                  }
             edge_data.append(d)
 
@@ -112,4 +121,3 @@ class AlgorithmController:
     def reset_algorithm(self):
         self.graph = self.graph_original_state.copy()
         print("Algorithm has been reset")
-
