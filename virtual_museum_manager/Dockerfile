@@ -1,7 +1,6 @@
-FROM arm64v8/python:3.9-slim-bullseye
+FROM python:3.9-slim-bullseye
 
 COPY requirements.txt /.
-RUN apt update && apt install -y gcc python3-dev
 RUN pip3 install -r /requirements.txt
 
 WORKDIR /mesa/

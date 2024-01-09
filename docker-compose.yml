@@ -18,7 +18,7 @@ services:
       - PYTHONUNBUFFERED=True
   
   persistence_layer:
-    image: "arm64v8/mongo:4.2.24"
+    image: "mongo:4.2.2"
     container_name: persistence_layer
     ports: 
       - "27017:27017"

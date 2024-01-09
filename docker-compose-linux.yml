@@ -4,7 +4,6 @@ services:
 
   virtualmuseum_visualization:
     container_name: virtualmuseum_visualization
-    platform: linux/amd64
     build: ./virtual_museum_visualization
     ports:
       - "1234:80" # remember the port expose syntax is HOST:CONTAINER !!! DO NOT CHANGE CONTAINER's  port value (port 80). You may only change the port in which the host can access the web service
@@ -19,7 +18,6 @@ services:
       - PYTHONUNBUFFERED=True
   
   persistence_layer:
-    platform: linux/amd64
     image: "mongo:4.2.2"
     container_name: persistence_layer
     ports: 
@@ -31,7 +29,6 @@ services:
 
   virtualmuseum_manager:
     container_name: virtualmuseum_manager
-    platform: linux/amd64
     build: ./virtual_museum_manager
     ports:
       - "1331:8521"
