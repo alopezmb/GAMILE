@@ -18,3 +18,7 @@ pycparser==2.21
 pymongo==3.10.1
 pytz==2023.3.post1
 requests==2.27.1
+six==1.16.0
+urllib3==1.26.18
+Werkzeug==2.2.2
+zipp==3.17.0
