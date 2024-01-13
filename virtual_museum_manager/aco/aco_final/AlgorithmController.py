@@ -68,8 +68,8 @@ class AlgorithmController:
         pheromome = self.graph[u][v]['pheromone']
         new_pheromone = pheromome * multiplier
         self.graph[u][v]['pheromone'] = new_pheromone
-        if new_pheromone >= 1:
-            self.graph[u][v]['pheromone'] = 0.9999999999
+        # if new_pheromone >= 1:
+        #     self.graph[u][v]['pheromone'] = 0.9999999999
 
     def manual_pheromone_and_continue_iters(self, edge, multiplier=250, limit=15):
         self.manual_pheromone_update(edge, multiplier=multiplier)
