@@ -27,6 +27,7 @@ class State:
     def set_best(self, best, iteration):
         self.is_new_record = self.record is None or best < self.record
         if self.is_new_record:
+            print(f'New record at iteration: {iteration}: ({best.cost})')
             self.previous_record = self.record
             self.record = best
             self.best_iteration = iteration

@@ -1940,7 +1940,7 @@
 		"depth":15
 	},
 	{
-		"item_name":"Las tres Gracias",
+		"item_name":"The Three Graces",
 		"item_type":2,
 		"model_url":"static/models/js/las_tres_gracias.js",
 		"author": "Peter Paul Rubens",
@@ -1994,7 +1994,7 @@
 		"depth":15
 	},
 	{
-		"item_name":"The 3rd of May 1808 in Madrid, or “The Executions”",
+		"item_name":"The 3rd of May 1808 in Madrid",
 		"item_type":2,
 		"model_url":"static/models/js/fusilamientos.js",
 		"author": "Francisco de Goya",
