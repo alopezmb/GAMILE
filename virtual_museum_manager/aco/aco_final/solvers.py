@@ -104,6 +104,7 @@ class Solver:
             state = State(graph=graph, ants=ants, limit=limit, n_ants=n_ants, colony=colony)
         else:
             state = self.state
+            state.limit = limit
             ants = state.ants
 
         # loop to yield increasingly better solutions
